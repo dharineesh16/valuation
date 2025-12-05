@@ -1,0 +1,376 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-05 10:28:58.175450",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name_address_of_branch_section",
+  "name_of_customer_borrowal_unit",
+  "customer_details_section",
+  "name_of_the_current_owner",
+  "proposed_owner_of_property",
+  "apl_no",
+  "property_details_section",
+  "address",
+  "nearby",
+  "latitudelongitude",
+  "document_details_section",
+  "layout_regularization",
+  "building_plan",
+  "construction_permission",
+  "legal_documents",
+  "column_break_rfcm",
+  "physical_details_section",
+  "as_per_deed",
+  "east",
+  "west",
+  "north",
+  "south",
+  "as_per_actual_section",
+  "k",
+  "l",
+  "o",
+  "p",
+  "no_of_rooms",
+  "livingdining",
+  "total_no_of_floors",
+  "approx_age_of_the_property",
+  "column_break_bxeg",
+  "matching_of_boundaries",
+  "plot_demaracated",
+  "approved_land_use",
+  "type_of_property",
+  "bed_rooms",
+  "toilets",
+  "kitchen",
+  "floor_on_which_the_property_is_located",
+  "residual_age_of_the_property",
+  "tenure_occupancy_details_section",
+  "status_of_tenure",
+  "owned_rented",
+  "no_of_years_of_occupancy",
+  "relationship_of_tenantor_owner",
+  "stage_of_construction_section",
+  "stage_of_construction",
+  "if_under_construction__extent_of_completion",
+  "violations_if_any_observed_section",
+  "nature_and_extend_of_violations",
+  "horizontal_deviation",
+  "vertical_deviation"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_address_of_branch_section",
+   "fieldtype": "Section Break",
+   "label": "Name Address of Branch"
+  },
+  {
+   "fieldname": "name_of_customer_borrowal_unit",
+   "fieldtype": "Data",
+   "label": "Name Of Customer Borrowal unit"
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "name_of_the_current_owner",
+   "fieldtype": "Data",
+   "label": "Name of the current owner"
+  },
+  {
+   "fieldname": "proposed_owner_of_property",
+   "fieldtype": "Data",
+   "label": "Proposed Owner Of Property"
+  },
+  {
+   "fieldname": "apl_no",
+   "fieldtype": "Data",
+   "label": "Apl No"
+  },
+  {
+   "fieldname": "property_details_section",
+   "fieldtype": "Section Break",
+   "label": "Property Details"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "nearby",
+   "fieldtype": "Data",
+   "label": "Nearby"
+  },
+  {
+   "fieldname": "latitudelongitude",
+   "fieldtype": "Data",
+   "label": "LatitudeLongitude"
+  },
+  {
+   "fieldname": "document_details_section",
+   "fieldtype": "Section Break",
+   "label": "Document Details "
+  },
+  {
+   "fieldname": "layout_regularization",
+   "fieldtype": "Select",
+   "label": "Layout Regularization",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "building_plan",
+   "fieldtype": "Select",
+   "label": "Building Plan",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "construction_permission",
+   "fieldtype": "Select",
+   "label": "Construction Permission",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "legal_documents",
+   "fieldtype": "Select",
+   "label": "Legal Documents",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "column_break_rfcm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "physical_details_section",
+   "fieldtype": "Section Break",
+   "label": "Physical Details"
+  },
+  {
+   "fieldname": "as_per_deed",
+   "fieldtype": "Heading",
+   "label": "As Per Deed"
+  },
+  {
+   "fieldname": "east",
+   "fieldtype": "Select",
+   "label": "East"
+  },
+  {
+   "fieldname": "west",
+   "fieldtype": "Select",
+   "label": "West"
+  },
+  {
+   "fieldname": "north",
+   "fieldtype": "Select",
+   "label": "North"
+  },
+  {
+   "fieldname": "south",
+   "fieldtype": "Select",
+   "label": "South"
+  },
+  {
+   "fieldname": "as_per_actual_section",
+   "fieldtype": "Section Break",
+   "label": "As Per Actual"
+  },
+  {
+   "fieldname": "k",
+   "fieldtype": "Select",
+   "label": "East"
+  },
+  {
+   "fieldname": "l",
+   "fieldtype": "Select",
+   "label": "West"
+  },
+  {
+   "fieldname": "o",
+   "fieldtype": "Select",
+   "label": "North"
+  },
+  {
+   "fieldname": "p",
+   "fieldtype": "Select",
+   "label": "South"
+  },
+  {
+   "fieldname": "no_of_rooms",
+   "fieldtype": "Select",
+   "label": "No of rooms",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "fieldname": "livingdining",
+   "fieldtype": "Select",
+   "label": "Living/Dining",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "fieldname": "total_no_of_floors",
+   "fieldtype": "Select",
+   "label": "Total No of Floors",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "fieldname": "approx_age_of_the_property",
+   "fieldtype": "Select",
+   "label": "Approx age of the Property ",
+   "options": "Under Construction"
+  },
+  {
+   "fieldname": "column_break_bxeg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "matching_of_boundaries",
+   "fieldtype": "Select",
+   "label": "Matching of Boundaries",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "plot_demaracated",
+   "fieldtype": "Select",
+   "label": "Plot Demaracated",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "approved_land_use",
+   "fieldtype": "Select",
+   "label": "Approved land use",
+   "options": "Residental Special Type-I\nIndustry"
+  },
+  {
+   "fieldname": "type_of_property",
+   "fieldtype": "Select",
+   "label": "Type of Property",
+   "options": "Plotted/Flat\nLand"
+  },
+  {
+   "fieldname": "bed_rooms",
+   "fieldtype": "Select",
+   "label": "Bed Rooms",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "fieldname": "toilets",
+   "fieldtype": "Select",
+   "label": "Toilets",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "fieldname": "kitchen",
+   "fieldtype": "Select",
+   "label": "Kitchen",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+  },
+  {
+   "fieldname": "floor_on_which_the_property_is_located",
+   "fieldtype": "Select",
+   "label": "Floor on Which the Property is located ",
+   "options": "Ground & First Floor\nSecond Floor\nThird Floor"
+  },
+  {
+   "fieldname": "residual_age_of_the_property",
+   "fieldtype": "Select",
+   "label": "Residual age of the Property",
+   "options": "Under Construction"
+  },
+  {
+   "fieldname": "tenure_occupancy_details_section",
+   "fieldtype": "Section Break",
+   "label": "Tenure Occupancy Details"
+  },
+  {
+   "fieldname": "status_of_tenure",
+   "fieldtype": "Select",
+   "label": "Status of Tenure",
+   "options": "Under Construction"
+  },
+  {
+   "fieldname": "owned_rented",
+   "fieldtype": "Select",
+   "label": "Owned Rented",
+   "options": "NA"
+  },
+  {
+   "fieldname": "no_of_years_of_occupancy",
+   "fieldtype": "Select",
+   "label": "No of years of occupancy",
+   "options": "Under Construction"
+  },
+  {
+   "fieldname": "relationship_of_tenantor_owner",
+   "fieldtype": "Select",
+   "label": "Relationship of tenantor owner",
+   "options": "NA"
+  },
+  {
+   "fieldname": "stage_of_construction_section",
+   "fieldtype": "Section Break",
+   "label": "Stage of Construction"
+  },
+  {
+   "fieldname": "stage_of_construction",
+   "fieldtype": "Data",
+   "label": "Stage of Construction"
+  },
+  {
+   "fieldname": "if_under_construction__extent_of_completion",
+   "fieldtype": "Select",
+   "label": "If under construction , extent of completion",
+   "options": "Ground & First Floor Innner Plasting Completed.\nSecond Floor"
+  },
+  {
+   "fieldname": "violations_if_any_observed_section",
+   "fieldtype": "Section Break",
+   "label": "Violations if any observed "
+  },
+  {
+   "fieldname": "nature_and_extend_of_violations",
+   "fieldtype": "Heading",
+   "label": "Nature and extend of violations"
+  },
+  {
+   "fieldname": "horizontal_deviation",
+   "fieldtype": "Data",
+   "label": "Horizontal Deviation"
+  },
+  {
+   "fieldname": "vertical_deviation",
+   "fieldtype": "Data",
+   "label": "Vertical Deviation"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-05 11:45:48.457064",
+ "modified_by": "dharaneeshyuvaraj591@gmail.com",
+ "module": "Valuation App",
+ "name": "Valuation",
+ "owner": "dharaneeshyuvaraj591@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
