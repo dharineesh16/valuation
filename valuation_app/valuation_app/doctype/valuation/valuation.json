@@ -27,7 +27,7 @@
   "west",
   "north",
   "south",
-  "as_per_actual_section",
+  "trio",
   "k",
   "l",
   "o",
@@ -57,7 +57,103 @@
   "violations_if_any_observed_section",
   "nature_and_extend_of_violations",
   "horizontal_deviation",
-  "vertical_deviation"
+  "vertical_deviation",
+  "area_details_of_the_property_section",
+  "h",
+  "m",
+  "scaleable_area",
+  "remo",
+  "yt",
+  "hg",
+  "jn",
+  "cd",
+  "column_break_sonv",
+  "kamalesh",
+  "kathir",
+  "freedom",
+  "as_per_approved_plan_section",
+  "cf",
+  "dc",
+  "fr",
+  "nh",
+  "column_break_vkda",
+  "dharan",
+  "hari",
+  "fortness",
+  "valuation_section",
+  "fort",
+  "as_per_guideline_value",
+  "as_per_market_rate",
+  "realisable_value_for_market_land_rate",
+  "plinth_area_sft",
+  "floor_details",
+  "as_per_approved_plan",
+  "as_per_actual",
+  "pair",
+  "dear",
+  "column_break_yhwp",
+  "land_area",
+  "rate_for_sft",
+  "tron",
+  "ki",
+  "rate",
+  "hit",
+  "jack",
+  "ravi",
+  "amenities_section",
+  "depreciation",
+  "net_cost_after_depreciation",
+  "water_sump",
+  "septic_tank",
+  "bore",
+  "head_room",
+  "amentities",
+  "column_break_lztz",
+  "late",
+  "dare",
+  "saran",
+  "realizable_value",
+  "post",
+  "assumption_remarks_section",
+  "qualifications_in_tir_mitigation_suggested___if_any",
+  "property_is_sarfaesi_compliant",
+  "social_infrastructure",
+  "set_up",
+  "in_the",
+  "on_the",
+  "declaration_section",
+  "the_property_was_inspected_by_the_undersigned_on",
+  "any_direct",
+  "here_in",
+  "i_have_submitted_valuation_report_directly_to_the_bank",
+  "signature_of",
+  "signature_of_the_valuer",
+  "column_break_wrqe",
+  "date_of_valuation",
+  "enclosure_section",
+  "area_in",
+  "frog",
+  "floor_plan",
+  "in_case",
+  "wherever_applicable",
+  "longitude_latitude",
+  "viz_magicbricks",
+  "public_service",
+  "any_other_relevant_documents_extracts",
+  "remarks_section",
+  "under_construction_of_ground_and_first_floor",
+  "inner_plasting",
+  "gf_1_bhk__1_unit__total__2_units",
+  "summary_of_valuation_section",
+  "place",
+  "date",
+  "column_break_yoph",
+  "repo",
+  "glr_value",
+  "fair_market",
+  "realisable_value",
+  "lp",
+  "seal_of"
  ],
  "fields": [
   {
@@ -174,11 +270,6 @@
    "label": "South"
   },
   {
-   "fieldname": "as_per_actual_section",
-   "fieldtype": "Section Break",
-   "label": "As Per Actual"
-  },
-  {
    "fieldname": "k",
    "fieldtype": "Select",
    "label": "East"
@@ -207,7 +298,7 @@
   {
    "fieldname": "livingdining",
    "fieldtype": "Select",
-   "label": "Living/Dining",
+   "label": "Living Dining",
    "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
   },
   {
@@ -322,8 +413,8 @@
   {
    "fieldname": "if_under_construction__extent_of_completion",
    "fieldtype": "Select",
-   "label": "If under construction , extent of completion",
-   "options": "Ground & First Floor Innner Plasting Completed.\nSecond Floor"
+   "label": "If under construction  extent of completion",
+   "options": "Ground  First Floor Innner Plasting Completed.\nSecond Floor"
   },
   {
    "fieldname": "violations_if_any_observed_section",
@@ -344,12 +435,506 @@
    "fieldname": "vertical_deviation",
    "fieldtype": "Data",
    "label": "Vertical Deviation"
+  },
+  {
+   "fieldname": "trio",
+   "fieldtype": "Section Break",
+   "label": "As Per Actual"
+  },
+  {
+   "fieldname": "area_details_of_the_property_section",
+   "fieldtype": "Section Break",
+   "label": "Area Details of the Property"
+  },
+  {
+   "fieldname": "h",
+   "fieldtype": "Data",
+   "label": "Site Area As Per Document"
+  },
+  {
+   "fieldname": "m",
+   "fieldtype": "Data",
+   "label": "Site Area  As Per Document"
+  },
+  {
+   "fieldname": "scaleable_area",
+   "fieldtype": "Data",
+   "label": "Scaleable Area"
+  },
+  {
+   "fieldname": "remo",
+   "fieldtype": "Section Break",
+   "label": "As Per Actual"
+  },
+  {
+   "fieldname": "yt",
+   "fieldtype": "Data",
+   "label": "Plinth area"
+  },
+  {
+   "fieldname": "hg",
+   "fieldtype": "Data",
+   "label": "Carpet area"
+  },
+  {
+   "fieldname": "jn",
+   "fieldtype": "Data",
+   "label": "saleable Area"
+  },
+  {
+   "fieldname": "cd",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_sonv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "kamalesh",
+   "fieldtype": "Data",
+   "label": "Ground Floor"
+  },
+  {
+   "fieldname": "kathir",
+   "fieldtype": "Data",
+   "label": "F Floor"
+  },
+  {
+   "fieldname": "freedom",
+   "fieldtype": "Data",
+   "label": "Total In Sft"
+  },
+  {
+   "fieldname": "as_per_approved_plan_section",
+   "fieldtype": "Section Break",
+   "label": "As Per Approved Plan"
+  },
+  {
+   "fieldname": "cf",
+   "fieldtype": "Data",
+   "label": "Plinth area"
+  },
+  {
+   "fieldname": "dc",
+   "fieldtype": "Data",
+   "label": "Carpet area"
+  },
+  {
+   "fieldname": "fr",
+   "fieldtype": "Data",
+   "label": "Saleable Area"
+  },
+  {
+   "fieldname": "nh",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_vkda",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dharan",
+   "fieldtype": "Data",
+   "label": "G Floor"
+  },
+  {
+   "fieldname": "hari",
+   "fieldtype": "Data",
+   "label": "F Floor"
+  },
+  {
+   "fieldname": "fortness",
+   "fieldtype": "Data",
+   "label": "Total In Sft"
+  },
+  {
+   "fieldname": "valuation_section",
+   "fieldtype": "Section Break",
+   "label": "Valuation"
+  },
+  {
+   "fieldname": "fort",
+   "fieldtype": "Heading",
+   "label": "Total A"
+  },
+  {
+   "fieldname": "as_per_guideline_value",
+   "fieldtype": "Data",
+   "label": "As Per Guideline Value"
+  },
+  {
+   "fieldname": "as_per_market_rate",
+   "fieldtype": "Data",
+   "label": "As Per Market Rate"
+  },
+  {
+   "fieldname": "realisable_value_for_market_land_rate",
+   "fieldtype": "Data",
+   "label": "Realisable Value For Market Land Rate "
+  },
+  {
+   "fieldname": "plinth_area_sft",
+   "fieldtype": "Heading",
+   "label": "Plinth area sft"
+  },
+  {
+   "fieldname": "floor_details",
+   "fieldtype": "Data",
+   "label": "Floor Details "
+  },
+  {
+   "fieldname": "as_per_approved_plan",
+   "fieldtype": "Data",
+   "label": "As Per Approved Plan"
+  },
+  {
+   "fieldname": "as_per_actual",
+   "fieldtype": "Data",
+   "label": "As Per Actual "
+  },
+  {
+   "fieldname": "pair",
+   "fieldtype": "Data",
+   "label": "G Floor"
+  },
+  {
+   "fieldname": "dear",
+   "fieldtype": "Data",
+   "label": "F Floor"
+  },
+  {
+   "fieldname": "column_break_yhwp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "land_area",
+   "fieldtype": "Data",
+   "label": "Land Area"
+  },
+  {
+   "fieldname": "rate_for_sft",
+   "fieldtype": "Data",
+   "label": "Rate For Sft"
+  },
+  {
+   "fieldname": "tron",
+   "fieldtype": "Data",
+   "label": "Total Value"
+  },
+  {
+   "fieldname": "ki",
+   "fieldtype": "Data",
+   "label": "Forced Distressed Value For Market For Market Land Rate"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Data",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "hit",
+   "fieldtype": "Data",
+   "label": "Total As Per Approved Plan"
+  },
+  {
+   "fieldname": "jack",
+   "fieldtype": "Data",
+   "label": "Total As Per Actual "
+  },
+  {
+   "fieldname": "ravi",
+   "fieldtype": "Data",
+   "label": "Total"
+  },
+  {
+   "fieldname": "amenities_section",
+   "fieldtype": "Section Break",
+   "label": "Amenities"
+  },
+  {
+   "fieldname": "depreciation",
+   "fieldtype": "Data",
+   "label": "Depreciation"
+  },
+  {
+   "fieldname": "net_cost_after_depreciation",
+   "fieldtype": "Data",
+   "label": "Net Cost After Depreciation"
+  },
+  {
+   "fieldname": "water_sump",
+   "fieldtype": "Data",
+   "label": "Water Sump"
+  },
+  {
+   "fieldname": "septic_tank",
+   "fieldtype": "Data",
+   "label": "Septic Tank"
+  },
+  {
+   "fieldname": "bore",
+   "fieldtype": "Data",
+   "label": "Bore"
+  },
+  {
+   "fieldname": "head_room",
+   "fieldtype": "Data",
+   "label": "Head Room"
+  },
+  {
+   "fieldname": "amentities",
+   "fieldtype": "Data",
+   "label": "Amentities"
+  },
+  {
+   "fieldname": "column_break_lztz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late",
+   "fieldtype": "Data",
+   "label": "Total Building Value  Amentities"
+  },
+  {
+   "fieldname": "dare",
+   "fieldtype": "Data",
+   "label": "Total  Guide Line Value "
+  },
+  {
+   "fieldname": "saran",
+   "fieldtype": "Data",
+   "label": "Total   Fair Market Value "
+  },
+  {
+   "fieldname": "realizable_value",
+   "fieldtype": "Data",
+   "label": "Realizable Value "
+  },
+  {
+   "fieldname": "post",
+   "fieldtype": "Data",
+   "label": "Forced Distressed Value "
+  },
+  {
+   "fieldname": "assumption_remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Assumption Remarks "
+  },
+  {
+   "fieldname": "qualifications_in_tir_mitigation_suggested___if_any",
+   "fieldtype": "Select",
+   "label": "Qualifications in TIR Mitigation suggested   if any ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "property_is_sarfaesi_compliant",
+   "fieldtype": "Select",
+   "label": "Property is SARFAESI compliant ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "social_infrastructure",
+   "fieldtype": "Select",
+   "label": "Whether property Belonging to social infrastructure like hospital school  old age home etc",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "set_up",
+   "fieldtype": "Select",
+   "label": "Whether entire piece of land on which the unit is set up property is situated has been mortgaged  or to be mortgaged",
+   "options": "To Be Mortaged\nun Mortaged"
+  },
+  {
+   "fieldname": "in_the",
+   "fieldtype": "Select",
+   "label": "Details of last two transactions in the locality area to be provided available ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "on_the",
+   "fieldtype": "Select",
+   "label": "Any other aspect which has relevance on the value or marketability of the property ",
+   "options": "Nil"
+  },
+  {
+   "fieldname": "declaration_section",
+   "fieldtype": "Section Break",
+   "label": "Declaration"
+  },
+  {
+   "fieldname": "the_property_was_inspected_by_the_undersigned_on",
+   "fieldtype": "Button",
+   "label": "The property was inspected by the undersigned on "
+  },
+  {
+   "fieldname": "any_direct",
+   "fieldtype": "Button",
+   "label": "The undersigned does not have any direct indirect interest in the above property "
+  },
+  {
+   "fieldname": "here_in",
+   "fieldtype": "Button",
+   "label": "The information furnished here in is true and correct to the best of our knowledge "
+  },
+  {
+   "fieldname": "i_have_submitted_valuation_report_directly_to_the_bank",
+   "fieldtype": "Button",
+   "label": "I have submitted Valuation report directly to the Bank  "
+  },
+  {
+   "fieldname": "signature_of",
+   "fieldtype": "Section Break",
+   "label": "Name address signature of valuer with Wealth Tax Registration No."
+  },
+  {
+   "fieldname": "signature_of_the_valuer",
+   "fieldtype": "Signature",
+   "label": "Signature of the valuer "
+  },
+  {
+   "fieldname": "column_break_wrqe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_valuation",
+   "fieldtype": "Date",
+   "label": "Date of Valuation "
+  },
+  {
+   "fieldname": "enclosure_section",
+   "fieldtype": "Section Break",
+   "label": "Enclosure "
+  },
+  {
+   "fieldname": "area_in",
+   "fieldtype": "Select",
+   "label": "Layout plan sketch of the area in which the property is located with latitude and longitude ",
+   "options": "Yes Enclosed\nNo Disclosed"
+  },
+  {
+   "fieldname": "frog",
+   "fieldtype": "Select",
+   "label": "Building Plan",
+   "options": "Yes Enclosed\nNo Disclosed"
+  },
+  {
+   "fieldname": "floor_plan",
+   "fieldtype": "Select",
+   "label": "Floor Plan",
+   "options": "Nil"
+  },
+  {
+   "fieldname": "in_case",
+   "fieldtype": "Select",
+   "label": "Photograph of the property  including geo stamping with date   and owner  in case of housing loans  if borrower is available     ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "wherever_applicable",
+   "fieldtype": "Select",
+   "label": "Certified copy of the approved sanctioned plan wherever applicable from the concerned office  ",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "longitude_latitude",
+   "fieldtype": "Select",
+   "label": "Google Map location of the property longitude latitude and co-ordinates  of the property",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "viz_magicbricks",
+   "fieldtype": "Select",
+   "label": "Price trend of the property in the locality city from property search sites viz Magicbricks.com  99Acres.com Makan com etc",
+   "options": "Available\nNot Available"
+  },
+  {
+   "fieldname": "public_service",
+   "fieldtype": "Select",
+   "label": "Special remarks, if any ,like threat of acquisition of land for public service purposes road widening or applicability    ",
+   "options": "Nil"
+  },
+  {
+   "fieldname": "any_other_relevant_documents_extracts",
+   "fieldtype": "Select",
+   "label": "Any other relevant documents extracts ",
+   "options": "Nil"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks "
+  },
+  {
+   "fieldname": "under_construction_of_ground_and_first_floor",
+   "fieldtype": "Button",
+   "label": "Under construction Of Ground And First Floor. "
+  },
+  {
+   "fieldname": "inner_plasting",
+   "fieldtype": "Button",
+   "label": "Presently Ground And First Floor Inner Plasting Completed 75  Of work Completed "
+  },
+  {
+   "fieldname": "gf_1_bhk__1_unit__total__2_units",
+   "fieldtype": "Button",
+   "label": "GF 1 BHK  1 Unit  Total  2 Units "
+  },
+  {
+   "fieldname": "summary_of_valuation_section",
+   "fieldtype": "Section Break",
+   "label": "Summary Of Valuation "
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_yoph",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "repo",
+   "fieldtype": "Heading",
+   "label": "As Per Actual"
+  },
+  {
+   "fieldname": "glr_value",
+   "fieldtype": "Data",
+   "label": "GLR Value "
+  },
+  {
+   "fieldname": "fair_market",
+   "fieldtype": "Data",
+   "label": "Fair Market"
+  },
+  {
+   "fieldname": "realisable_value",
+   "fieldtype": "Data",
+   "label": "Realisable Value "
+  },
+  {
+   "fieldname": "lp",
+   "fieldtype": "Data",
+   "label": "Distress Sale Value "
+  },
+  {
+   "fieldname": "seal_of",
+   "fieldtype": "Signature",
+   "label": "Signature Name and offical seal of the Approved Valuer"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-05 11:45:48.457064",
+ "modified": "2025-12-05 16:54:29.530087",
  "modified_by": "dharaneeshyuvaraj591@gmail.com",
  "module": "Valuation App",
  "name": "Valuation",
