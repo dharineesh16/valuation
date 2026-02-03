@@ -5,46 +5,58 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name_address_of_branch_section",
-  "name_of_customer_borrowal_unit",
   "customer_details_section",
   "name_of_the_current_owner",
-  "proposed_owner_of_property",
-  "apl_no",
   "property_details_section",
   "address",
   "nearby",
   "latitudelongitude",
   "document_details_section",
   "layout_regularization",
-  "building_plan",
-  "construction_permission",
   "legal_documents",
+  "name_of_approving_authority",
   "column_break_rfcm",
+  "approval_no_2",
+  "list_of_documents",
+  "list_of_doc_no",
   "physical_details_section",
   "as_per_deed",
+  "adjoining_properties",
   "east",
+  "road",
+  "pio",
   "west",
+  "park",
+  "ol_p",
   "north",
+  "house",
+  "hk_p",
   "south",
+  "proposed",
+  "er_l",
   "trio",
+  "adjoin_properties",
   "k",
+  "fr_road",
+  "pravee_p",
   "l",
+  "cc",
+  "retro_r",
   "o",
+  "vacant_load",
+  "repo_r",
   "p",
-  "no_of_rooms",
-  "livingdining",
-  "total_no_of_floors",
-  "approx_age_of_the_property",
-  "column_break_bxeg",
-  "matching_of_boundaries",
-  "plot_demaracated",
+  "sth_vacant_load",
+  "prom_p",
   "approved_land_use",
-  "type_of_property",
+  "column_break_bxeg",
+  "no_of_rooms",
   "bed_rooms",
   "toilets",
   "kitchen",
   "floor_on_which_the_property_is_located",
+  "total_no_of_floors",
+  "approx_age_of_the_property",
   "residual_age_of_the_property",
   "tenure_occupancy_details_section",
   "status_of_tenure",
@@ -64,108 +76,93 @@
   "scaleable_area",
   "remo",
   "yt",
+  "priya_p",
   "hg",
+  "remo_r",
   "jn",
-  "cd",
+  "vidu_r",
   "column_break_sonv",
-  "kamalesh",
-  "kathir",
   "freedom",
+  "total_in_sft",
+  "to_total_in_sft",
   "as_per_approved_plan_section",
-  "cf",
+  "cf_c",
+  "promo_p",
   "dc",
+  "board_er",
   "fr",
-  "nh",
-  "column_break_vkda",
-  "dharan",
-  "hari",
+  "youth_y",
+  "column_break_dnbx",
   "fortness",
+  "cp_total_in_sft",
+  "sa_total_in_sft",
   "valuation_section",
   "fort",
   "as_per_guideline_value",
-  "as_per_market_rate",
   "realisable_value_for_market_land_rate",
+  "as_per_market_rate",
   "plinth_area_sft",
   "floor_details",
-  "as_per_approved_plan",
-  "as_per_actual",
-  "pair",
-  "dear",
-  "column_break_yhwp",
-  "land_area",
-  "rate_for_sft",
+  "rp_as_per_approved_plan",
+  "ae_per_approved_plan",
+  "vp_as_per_actual",
+  "as_per_actual_2",
+  "column_break_yisd",
   "tron",
-  "ki",
-  "rate",
+  "dr_d",
+  "rate_for_sft",
+  "mr_rate_for_sft",
+  "forced_distressed_value_for_market_land_rate",
+  "rate_2",
+  "iu_i",
   "hit",
+  "float_htmj",
   "jack",
+  "ip_i",
   "ravi",
+  "ipl_i",
   "amenities_section",
-  "depreciation",
   "net_cost_after_depreciation",
+  "net_cost_after_depreciation_1",
   "water_sump",
+  "lo_l",
   "septic_tank",
+  "ty_t",
   "bore",
+  "tl_t",
   "head_room",
+  "mn_m",
   "amentities",
+  "jkl_j",
   "column_break_lztz",
-  "late",
-  "dare",
-  "saran",
+  "total_buliding_value_amentities",
+  "jk_total_buliding_amentities",
+  "total_guide_line",
+  "iopl_total_guide_line",
+  "total_fair_market_value",
+  "khj_total_fair_market",
   "realizable_value",
-  "post",
-  "assumption_remarks_section",
-  "qualifications_in_tir_mitigation_suggested___if_any",
-  "property_is_sarfaesi_compliant",
-  "social_infrastructure",
-  "set_up",
-  "in_the",
-  "on_the",
+  "piol_realizable_value",
+  "forced_distressed_value",
+  "yuo_forced_distressed_value",
   "declaration_section",
-  "the_property_was_inspected_by_the_undersigned_on",
-  "any_direct",
-  "here_in",
-  "i_have_submitted_valuation_report_directly_to_the_bank",
-  "signature_of",
-  "signature_of_the_valuer",
-  "column_break_wrqe",
+  "property_undersigned",
   "date_of_valuation",
-  "enclosure_section",
-  "area_in",
-  "frog",
-  "floor_plan",
-  "in_case",
-  "wherever_applicable",
-  "longitude_latitude",
-  "viz_magicbricks",
-  "public_service",
-  "any_other_relevant_documents_extracts",
-  "remarks_section",
-  "under_construction_of_ground_and_first_floor",
-  "inner_plasting",
-  "gf_1_bhk__1_unit__total__2_units",
   "summary_of_valuation_section",
-  "place",
+  "as_per_plan",
+  "uoyt_glr_value",
+  "iuyt_market_value",
+  "uyt_realisable_value",
+  "iutyre_distress_sale_value",
   "date",
   "column_break_yoph",
   "repo",
   "glr_value",
   "fair_market",
   "realisable_value",
-  "lp",
-  "seal_of"
+  "ip_distress_sale_value"
  ],
  "fields": [
-  {
-   "fieldname": "name_address_of_branch_section",
-   "fieldtype": "Section Break",
-   "label": "Name Address of Branch"
-  },
-  {
-   "fieldname": "name_of_customer_borrowal_unit",
-   "fieldtype": "Data",
-   "label": "Name Of Customer Borrowal unit"
-  },
   {
    "fieldname": "customer_details_section",
    "fieldtype": "Section Break",
@@ -177,23 +174,13 @@
    "label": "Name of the current owner"
   },
   {
-   "fieldname": "proposed_owner_of_property",
-   "fieldtype": "Data",
-   "label": "Proposed Owner Of Property"
-  },
-  {
-   "fieldname": "apl_no",
-   "fieldtype": "Data",
-   "label": "Apl No"
-  },
-  {
    "fieldname": "property_details_section",
    "fieldtype": "Section Break",
    "label": "Property Details"
   },
   {
    "fieldname": "address",
-   "fieldtype": "Small Text",
+   "fieldtype": "Data",
    "label": "Address"
   },
   {
@@ -213,27 +200,15 @@
   },
   {
    "fieldname": "layout_regularization",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "Layout Regularization",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "building_plan",
-   "fieldtype": "Select",
-   "label": "Building Plan",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "construction_permission",
-   "fieldtype": "Select",
-   "label": "Construction Permission",
-   "options": "Yes\nNo"
+   "placeholder": "Name of Approving Authority"
   },
   {
    "fieldname": "legal_documents",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "Legal Documents",
-   "options": "Yes\nNo"
+   "placeholder": "Eg: Sale Deed No:"
   },
   {
    "fieldname": "column_break_rfcm",
@@ -251,125 +226,87 @@
   },
   {
    "fieldname": "east",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "East"
   },
   {
    "fieldname": "west",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "West"
   },
   {
    "fieldname": "north",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "North"
   },
   {
    "fieldname": "south",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "South"
   },
   {
    "fieldname": "k",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "East"
   },
   {
    "fieldname": "l",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "West"
   },
   {
    "fieldname": "o",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "North"
   },
   {
    "fieldname": "p",
-   "fieldtype": "Select",
+   "fieldtype": "Heading",
    "label": "South"
   },
   {
    "fieldname": "no_of_rooms",
-   "fieldtype": "Select",
-   "label": "No of rooms",
-   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
-  },
-  {
-   "fieldname": "livingdining",
-   "fieldtype": "Select",
-   "label": "Living Dining",
-   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldtype": "Int",
+   "label": "No of rooms"
   },
   {
    "fieldname": "total_no_of_floors",
-   "fieldtype": "Select",
-   "label": "Total No of Floors",
-   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldtype": "Int",
+   "label": "Total No of Floors"
   },
   {
    "fieldname": "approx_age_of_the_property",
-   "fieldtype": "Select",
-   "label": "Approx age of the Property ",
-   "options": "Under Construction"
+   "fieldtype": "Data",
+   "label": "Approx age of the Property "
   },
   {
    "fieldname": "column_break_bxeg",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "matching_of_boundaries",
-   "fieldtype": "Select",
-   "label": "Matching of Boundaries",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "plot_demaracated",
-   "fieldtype": "Select",
-   "label": "Plot Demaracated",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "approved_land_use",
-   "fieldtype": "Select",
-   "label": "Approved land use",
-   "options": "Residental Special Type-I\nIndustry"
-  },
-  {
-   "fieldname": "type_of_property",
-   "fieldtype": "Select",
-   "label": "Type of Property",
-   "options": "Plotted/Flat\nLand"
-  },
-  {
    "fieldname": "bed_rooms",
-   "fieldtype": "Select",
-   "label": "Bed Rooms",
-   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldtype": "Int",
+   "label": "Bed Rooms"
   },
   {
    "fieldname": "toilets",
-   "fieldtype": "Select",
-   "label": "Toilets",
-   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldtype": "Int",
+   "label": "Toilets"
   },
   {
    "fieldname": "kitchen",
-   "fieldtype": "Select",
-   "label": "Kitchen",
-   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "fieldtype": "Int",
+   "label": "Kitchen"
   },
   {
    "fieldname": "floor_on_which_the_property_is_located",
-   "fieldtype": "Select",
-   "label": "Floor on Which the Property is located ",
-   "options": "Ground & First Floor\nSecond Floor\nThird Floor"
+   "fieldtype": "Data",
+   "label": "Floor on Which the Property is located "
   },
   {
    "fieldname": "residual_age_of_the_property",
-   "fieldtype": "Select",
-   "label": "Residual age of the Property",
-   "options": "Under Construction"
+   "fieldtype": "Data",
+   "label": "Residual age of the Property"
   },
   {
    "fieldname": "tenure_occupancy_details_section",
@@ -378,27 +315,23 @@
   },
   {
    "fieldname": "status_of_tenure",
-   "fieldtype": "Select",
-   "label": "Status of Tenure",
-   "options": "Under Construction"
+   "fieldtype": "Data",
+   "label": "Status of Tenure"
   },
   {
    "fieldname": "owned_rented",
-   "fieldtype": "Select",
-   "label": "Owned Rented",
-   "options": "NA"
+   "fieldtype": "Data",
+   "label": "Owned Rented"
   },
   {
    "fieldname": "no_of_years_of_occupancy",
-   "fieldtype": "Select",
-   "label": "No of years of occupancy",
-   "options": "Under Construction"
+   "fieldtype": "Data",
+   "label": "No of years of occupancy"
   },
   {
    "fieldname": "relationship_of_tenantor_owner",
-   "fieldtype": "Select",
-   "label": "Relationship of tenantor owner",
-   "options": "NA"
+   "fieldtype": "Data",
+   "label": "Relationship of tenantor owner "
   },
   {
    "fieldname": "stage_of_construction_section",
@@ -412,9 +345,8 @@
   },
   {
    "fieldname": "if_under_construction__extent_of_completion",
-   "fieldtype": "Select",
-   "label": "If under construction  extent of completion",
-   "options": "Ground  First Floor Innner Plasting Completed.\nSecond Floor"
+   "fieldtype": "Data",
+   "label": "If under construction  extent of completion"
   },
   {
    "fieldname": "violations_if_any_observed_section",
@@ -428,12 +360,12 @@
   },
   {
    "fieldname": "horizontal_deviation",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Horizontal Deviation"
   },
   {
    "fieldname": "vertical_deviation",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Vertical Deviation"
   },
   {
@@ -448,18 +380,18 @@
   },
   {
    "fieldname": "h",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Site Area As Per Document"
   },
   {
    "fieldname": "m",
-   "fieldtype": "Data",
-   "label": "Site Area  As Per Document"
+   "fieldtype": "Int",
+   "label": "Site Area  As Per actual"
   },
   {
    "fieldname": "scaleable_area",
-   "fieldtype": "Data",
-   "label": "Scaleable Area"
+   "fieldtype": "Int",
+   "label": "Saleable Area"
   },
   {
    "fieldname": "remo",
@@ -468,41 +400,29 @@
   },
   {
    "fieldname": "yt",
-   "fieldtype": "Data",
-   "label": "Plinth area"
+   "fieldtype": "Float",
+   "label": "Plinth area",
+   "precision": "2"
   },
   {
    "fieldname": "hg",
-   "fieldtype": "Data",
-   "label": "Carpet area"
+   "fieldtype": "Float",
+   "label": "Carpet area",
+   "precision": "2"
   },
   {
    "fieldname": "jn",
-   "fieldtype": "Data",
-   "label": "saleable Area"
-  },
-  {
-   "fieldname": "cd",
-   "fieldtype": "Data",
-   "label": "Remarks"
+   "fieldtype": "Float",
+   "label": "saleable Area",
+   "precision": "2"
   },
   {
    "fieldname": "column_break_sonv",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "kamalesh",
-   "fieldtype": "Data",
-   "label": "Ground Floor"
-  },
-  {
-   "fieldname": "kathir",
-   "fieldtype": "Data",
-   "label": "F Floor"
-  },
-  {
    "fieldname": "freedom",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Total In Sft"
   },
   {
@@ -511,42 +431,20 @@
    "label": "As Per Approved Plan"
   },
   {
-   "fieldname": "cf",
-   "fieldtype": "Data",
-   "label": "Plinth area"
-  },
-  {
    "fieldname": "dc",
-   "fieldtype": "Data",
-   "label": "Carpet area"
+   "fieldtype": "Float",
+   "label": "Carpet area",
+   "precision": "2"
   },
   {
    "fieldname": "fr",
-   "fieldtype": "Data",
-   "label": "Saleable Area"
-  },
-  {
-   "fieldname": "nh",
-   "fieldtype": "Data",
-   "label": "Remarks"
-  },
-  {
-   "fieldname": "column_break_vkda",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "dharan",
-   "fieldtype": "Data",
-   "label": "G Floor"
-  },
-  {
-   "fieldname": "hari",
-   "fieldtype": "Data",
-   "label": "F Floor"
+   "fieldtype": "Float",
+   "label": "Saleable Area",
+   "precision": "2"
   },
   {
    "fieldname": "fortness",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Total In Sft"
   },
   {
@@ -561,12 +459,13 @@
   },
   {
    "fieldname": "as_per_guideline_value",
-   "fieldtype": "Data",
-   "label": "As Per Guideline Value"
+   "fieldtype": "Float",
+   "label": "As Per Guideline Value",
+   "precision": "2"
   },
   {
    "fieldname": "as_per_market_rate",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "As Per Market Rate"
   },
   {
@@ -576,76 +475,34 @@
   },
   {
    "fieldname": "plinth_area_sft",
-   "fieldtype": "Heading",
+   "fieldtype": "Button",
    "label": "Plinth area sft"
   },
   {
    "fieldname": "floor_details",
-   "fieldtype": "Data",
+   "fieldtype": "Button",
    "label": "Floor Details "
   },
   {
-   "fieldname": "as_per_approved_plan",
-   "fieldtype": "Data",
-   "label": "As Per Approved Plan"
-  },
-  {
-   "fieldname": "as_per_actual",
-   "fieldtype": "Data",
-   "label": "As Per Actual "
-  },
-  {
-   "fieldname": "pair",
-   "fieldtype": "Data",
-   "label": "G Floor"
-  },
-  {
-   "fieldname": "dear",
-   "fieldtype": "Data",
-   "label": "F Floor"
-  },
-  {
-   "fieldname": "column_break_yhwp",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "land_area",
-   "fieldtype": "Data",
-   "label": "Land Area"
-  },
-  {
-   "fieldname": "rate_for_sft",
-   "fieldtype": "Data",
-   "label": "Rate For Sft"
-  },
-  {
    "fieldname": "tron",
-   "fieldtype": "Data",
-   "label": "Total Value"
-  },
-  {
-   "fieldname": "ki",
-   "fieldtype": "Data",
-   "label": "Forced Distressed Value For Market For Market Land Rate"
-  },
-  {
-   "fieldname": "rate",
-   "fieldtype": "Data",
-   "label": "Rate"
+   "fieldtype": "Int",
+   "label": "Total Value",
+   "precision": "2"
   },
   {
    "fieldname": "hit",
-   "fieldtype": "Data",
-   "label": "Total As Per Approved Plan"
+   "fieldtype": "Float",
+   "label": "Total As Per Approved Plan",
+   "precision": "2"
   },
   {
    "fieldname": "jack",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Total As Per Actual "
   },
   {
    "fieldname": "ravi",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Total"
   },
   {
@@ -654,38 +511,33 @@
    "label": "Amenities"
   },
   {
-   "fieldname": "depreciation",
-   "fieldtype": "Data",
-   "label": "Depreciation"
-  },
-  {
    "fieldname": "net_cost_after_depreciation",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Net Cost After Depreciation"
   },
   {
    "fieldname": "water_sump",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Water Sump"
   },
   {
    "fieldname": "septic_tank",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Septic Tank"
   },
   {
    "fieldname": "bore",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Bore"
   },
   {
    "fieldname": "head_room",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Head Room"
   },
   {
    "fieldname": "amentities",
-   "fieldtype": "Data",
+   "fieldtype": "Float",
    "label": "Amentities"
   },
   {
@@ -693,208 +545,14 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "late",
-   "fieldtype": "Data",
-   "label": "Total Building Value  Amentities"
-  },
-  {
-   "fieldname": "dare",
-   "fieldtype": "Data",
-   "label": "Total  Guide Line Value "
-  },
-  {
-   "fieldname": "saran",
-   "fieldtype": "Data",
-   "label": "Total   Fair Market Value "
-  },
-  {
    "fieldname": "realizable_value",
-   "fieldtype": "Data",
-   "label": "Realizable Value "
-  },
-  {
-   "fieldname": "post",
-   "fieldtype": "Data",
-   "label": "Forced Distressed Value "
-  },
-  {
-   "fieldname": "assumption_remarks_section",
-   "fieldtype": "Section Break",
-   "label": "Assumption Remarks "
-  },
-  {
-   "fieldname": "qualifications_in_tir_mitigation_suggested___if_any",
-   "fieldtype": "Select",
-   "label": "Qualifications in TIR Mitigation suggested   if any ",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "property_is_sarfaesi_compliant",
-   "fieldtype": "Select",
-   "label": "Property is SARFAESI compliant ",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "social_infrastructure",
-   "fieldtype": "Select",
-   "label": "Whether property Belonging to social infrastructure like hospital school  old age home etc",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "set_up",
-   "fieldtype": "Select",
-   "label": "Whether entire piece of land on which the unit is set up property is situated has been mortgaged  or to be mortgaged",
-   "options": "To Be Mortaged\nun Mortaged"
-  },
-  {
-   "fieldname": "in_the",
-   "fieldtype": "Select",
-   "label": "Details of last two transactions in the locality area to be provided available ",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "on_the",
-   "fieldtype": "Select",
-   "label": "Any other aspect which has relevance on the value or marketability of the property ",
-   "options": "Nil"
-  },
-  {
-   "fieldname": "declaration_section",
-   "fieldtype": "Section Break",
-   "label": "Declaration"
-  },
-  {
-   "fieldname": "the_property_was_inspected_by_the_undersigned_on",
-   "fieldtype": "Button",
-   "label": "The property was inspected by the undersigned on "
-  },
-  {
-   "fieldname": "any_direct",
-   "fieldtype": "Button",
-   "label": "The undersigned does not have any direct indirect interest in the above property "
-  },
-  {
-   "fieldname": "here_in",
-   "fieldtype": "Button",
-   "label": "The information furnished here in is true and correct to the best of our knowledge "
-  },
-  {
-   "fieldname": "i_have_submitted_valuation_report_directly_to_the_bank",
-   "fieldtype": "Button",
-   "label": "I have submitted Valuation report directly to the Bank  "
-  },
-  {
-   "fieldname": "signature_of",
-   "fieldtype": "Section Break",
-   "label": "Name address signature of valuer with Wealth Tax Registration No."
-  },
-  {
-   "fieldname": "signature_of_the_valuer",
-   "fieldtype": "Signature",
-   "label": "Signature of the valuer "
-  },
-  {
-   "fieldname": "column_break_wrqe",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "date_of_valuation",
-   "fieldtype": "Date",
-   "label": "Date of Valuation "
-  },
-  {
-   "fieldname": "enclosure_section",
-   "fieldtype": "Section Break",
-   "label": "Enclosure "
-  },
-  {
-   "fieldname": "area_in",
-   "fieldtype": "Select",
-   "label": "Layout plan sketch of the area in which the property is located with latitude and longitude ",
-   "options": "Yes Enclosed\nNo Disclosed"
-  },
-  {
-   "fieldname": "frog",
-   "fieldtype": "Select",
-   "label": "Building Plan",
-   "options": "Yes Enclosed\nNo Disclosed"
-  },
-  {
-   "fieldname": "floor_plan",
-   "fieldtype": "Select",
-   "label": "Floor Plan",
-   "options": "Nil"
-  },
-  {
-   "fieldname": "in_case",
-   "fieldtype": "Select",
-   "label": "Photograph of the property  including geo stamping with date   and owner  in case of housing loans  if borrower is available     ",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "wherever_applicable",
-   "fieldtype": "Select",
-   "label": "Certified copy of the approved sanctioned plan wherever applicable from the concerned office  ",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "longitude_latitude",
-   "fieldtype": "Select",
-   "label": "Google Map location of the property longitude latitude and co-ordinates  of the property",
-   "options": "Yes\nNo"
-  },
-  {
-   "fieldname": "viz_magicbricks",
-   "fieldtype": "Select",
-   "label": "Price trend of the property in the locality city from property search sites viz Magicbricks.com  99Acres.com Makan com etc",
-   "options": "Available\nNot Available"
-  },
-  {
-   "fieldname": "public_service",
-   "fieldtype": "Select",
-   "label": "Special remarks, if any ,like threat of acquisition of land for public service purposes road widening or applicability    ",
-   "options": "Nil"
-  },
-  {
-   "fieldname": "any_other_relevant_documents_extracts",
-   "fieldtype": "Select",
-   "label": "Any other relevant documents extracts ",
-   "options": "Nil"
-  },
-  {
-   "fieldname": "remarks_section",
-   "fieldtype": "Section Break",
-   "label": "Remarks "
-  },
-  {
-   "fieldname": "under_construction_of_ground_and_first_floor",
-   "fieldtype": "Button",
-   "label": "Under construction Of Ground And First Floor. "
-  },
-  {
-   "fieldname": "inner_plasting",
-   "fieldtype": "Button",
-   "label": "Presently Ground And First Floor Inner Plasting Completed 75  Of work Completed "
-  },
-  {
-   "fieldname": "gf_1_bhk__1_unit__total__2_units",
-   "fieldtype": "Button",
-   "label": "GF 1 BHK  1 Unit  Total  2 Units "
+   "fieldtype": "Float",
+   "label": "Realizable Value 90%"
   },
   {
    "fieldname": "summary_of_valuation_section",
    "fieldtype": "Section Break",
    "label": "Summary Of Valuation "
-  },
-  {
-   "fieldname": "place",
-   "fieldtype": "Data",
-   "label": "Place"
-  },
-  {
-   "fieldname": "date",
-   "fieldtype": "Date",
-   "label": "Date"
   },
   {
    "fieldname": "column_break_yoph",
@@ -921,21 +579,390 @@
    "label": "Realisable Value "
   },
   {
-   "fieldname": "lp",
+   "fieldname": "approval_no_2",
+   "fieldtype": "Data",
+   "label": "Approval No"
+  },
+  {
+   "fieldname": "pio",
+   "fieldtype": "Int",
+   "label": "Ft"
+  },
+  {
+   "fieldname": "ol_p",
+   "fieldtype": "Data",
+   "label": "Ft"
+  },
+  {
+   "fieldname": "hk_p",
+   "fieldtype": "Int",
+   "label": "Ft"
+  },
+  {
+   "fieldname": "er_l",
+   "fieldtype": "Data",
+   "label": "Ft"
+  },
+  {
+   "fieldname": "pravee_p",
+   "fieldtype": "Int",
+   "label": "Ft"
+  },
+  {
+   "fieldname": "retro_r",
+   "fieldtype": "Int",
+   "label": "Ft"
+  },
+  {
+   "fieldname": "repo_r",
+   "fieldtype": "Int",
+   "label": "Ft"
+  },
+  {
+   "fieldname": "prom_p",
+   "fieldtype": "Int",
+   "label": "Ft"
+  },
+  {
+   "fieldname": "priya_p",
+   "fieldtype": "Float",
+   "label": "Plinth Area"
+  },
+  {
+   "fieldname": "remo_r",
+   "fieldtype": "Float",
+   "label": "Carpet Area"
+  },
+  {
+   "fieldname": "vidu_r",
+   "fieldtype": "Float",
+   "label": "Saleable Area",
+   "precision": "2"
+  },
+  {
+   "fieldname": "cf_c",
+   "fieldtype": "Float",
+   "label": "Plinth area",
+   "precision": "2"
+  },
+  {
+   "fieldname": "promo_p",
+   "fieldtype": "Float",
+   "label": "Plinth area",
+   "precision": "2"
+  },
+  {
+   "fieldname": "board_er",
+   "fieldtype": "Float",
+   "label": "Carpet area",
+   "precision": "2"
+  },
+  {
+   "fieldname": "youth_y",
+   "fieldtype": "Float",
+   "label": "Saleable Area",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_dnbx",
+   "fieldtype": "Column Break",
+   "hidden": 1,
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "dr_d",
+   "fieldtype": "Int",
+   "label": "Total Value"
+  },
+  {
+   "fieldname": "iu_i",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "float_htmj",
+   "fieldtype": "Int",
+   "label": "Total As Per Approved Plan"
+  },
+  {
+   "fieldname": "ip_i",
+   "fieldtype": "Int",
+   "label": "Total As Per Actual"
+  },
+  {
+   "fieldname": "ipl_i",
+   "fieldtype": "Int",
+   "label": "Total"
+  },
+  {
+   "fieldname": "lo_l",
+   "fieldtype": "Float",
+   "label": "Water Sump"
+  },
+  {
+   "fieldname": "ty_t",
+   "fieldtype": "Float",
+   "label": "Sepatic Tank"
+  },
+  {
+   "fieldname": "tl_t",
+   "fieldtype": "Float",
+   "label": "Bore"
+  },
+  {
+   "fieldname": "mn_m",
+   "fieldtype": "Float",
+   "label": "Head Room"
+  },
+  {
+   "fieldname": "jkl_j",
+   "fieldtype": "Float",
+   "label": "Amenities"
+  },
+  {
+   "fieldname": "as_per_plan",
+   "fieldtype": "Heading",
+   "label": "As Per Plan"
+  },
+  {
+   "fieldname": "total_in_sft",
+   "fieldtype": "Float",
+   "label": "Total In Sft"
+  },
+  {
+   "fieldname": "to_total_in_sft",
+   "fieldtype": "Float",
+   "label": "Total In Sft"
+  },
+  {
+   "fieldname": "cp_total_in_sft",
+   "fieldtype": "Float",
+   "label": "Total In Sft"
+  },
+  {
+   "fieldname": "sa_total_in_sft",
+   "fieldtype": "Float",
+   "label": "Total In Sft"
+  },
+  {
+   "fieldname": "rate_for_sft",
+   "fieldtype": "Float",
+   "label": "Rate For Sft"
+  },
+  {
+   "fieldname": "ae_per_approved_plan",
+   "fieldtype": "Float",
+   "label": "As Per Approved Plan",
+   "precision": "2"
+  },
+  {
+   "fieldname": "rp_as_per_approved_plan",
+   "fieldtype": "Float",
+   "label": "As Per Approved Plan",
+   "precision": "2"
+  },
+  {
+   "fieldname": "as_per_actual_2",
+   "fieldtype": "Float",
+   "label": "As Per Actual "
+  },
+  {
+   "fieldname": "vp_as_per_actual",
+   "fieldtype": "Float",
+   "label": "As Per Actual"
+  },
+  {
+   "fieldname": "column_break_yisd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate_2",
+   "fieldtype": "Float",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "total_buliding_value_amentities",
+   "fieldtype": "Float",
+   "label": "Total Building Value  Amentities"
+  },
+  {
+   "fieldname": "jk_total_buliding_amentities",
+   "fieldtype": "Float",
+   "label": "Total Building Value Amentities"
+  },
+  {
+   "fieldname": "total_guide_line",
+   "fieldtype": "Float",
+   "label": "Total(A+B+C)- Guide Line Value "
+  },
+  {
+   "fieldname": "iopl_total_guide_line",
+   "fieldtype": "Float",
+   "label": "Total(A+B+C) - Guide Line Value"
+  },
+  {
+   "fieldname": "total_fair_market_value",
+   "fieldtype": "Float",
+   "label": "Total(A+B+C) Fair Market Value "
+  },
+  {
+   "fieldname": "khj_total_fair_market",
+   "fieldtype": "Float",
+   "label": "Total(A+B+C) Fair Market Value"
+  },
+  {
+   "fieldname": "piol_realizable_value",
+   "fieldtype": "Float",
+   "label": "Realizable Value 90%"
+  },
+  {
+   "fieldname": "forced_distressed_value",
+   "fieldtype": "Float",
+   "label": "Forced Distressed Value 80%"
+  },
+  {
+   "fieldname": "yuo_forced_distressed_value",
+   "fieldtype": "Float",
+   "label": "Forced Distressed Value 80%"
+  },
+  {
+   "fieldname": "uoyt_glr_value",
+   "fieldtype": "Data",
+   "label": "GLR Value"
+  },
+  {
+   "fieldname": "iuyt_market_value",
+   "fieldtype": "Data",
+   "label": "Market Value"
+  },
+  {
+   "fieldname": "uyt_realisable_value",
+   "fieldtype": "Data",
+   "label": "Realisable value"
+  },
+  {
+   "fieldname": "iutyre_distress_sale_value",
+   "fieldtype": "Data",
+   "label": "Distress Sale Value"
+  },
+  {
+   "fieldname": "ip_distress_sale_value",
    "fieldtype": "Data",
    "label": "Distress Sale Value "
   },
   {
-   "fieldname": "seal_of",
-   "fieldtype": "Signature",
-   "label": "Signature Name and offical seal of the Approved Valuer"
+   "fieldname": "mr_rate_for_sft",
+   "fieldtype": "Int",
+   "label": "Rate For Sft"
+  },
+  {
+   "fieldname": "road",
+   "fieldtype": "Data",
+   "label": "road"
+  },
+  {
+   "fieldname": "adjoining_properties",
+   "fieldtype": "Heading",
+   "label": "adjoining properties"
+  },
+  {
+   "fieldname": "park",
+   "fieldtype": "Data",
+   "label": "park"
+  },
+  {
+   "fieldname": "house",
+   "fieldtype": "Data",
+   "label": "house"
+  },
+  {
+   "fieldname": "proposed",
+   "fieldtype": "Data",
+   "label": "proposed"
+  },
+  {
+   "fieldname": "adjoin_properties",
+   "fieldtype": "Heading",
+   "label": "adjoining properties"
+  },
+  {
+   "fieldname": "fr_road",
+   "fieldtype": "Data",
+   "label": "road"
+  },
+  {
+   "fieldname": "cc",
+   "fieldtype": "Data",
+   "label": "CC"
+  },
+  {
+   "fieldname": "vacant_load",
+   "fieldtype": "Data",
+   "label": "vacant land"
+  },
+  {
+   "fieldname": "sth_vacant_load",
+   "fieldtype": "Data",
+   "label": "vacant land"
+  },
+  {
+   "fieldname": "name_of_approving_authority",
+   "fieldtype": "Data",
+   "label": "name of approving authority"
+  },
+  {
+   "fieldname": "list_of_documents",
+   "fieldtype": "Data",
+   "label": "list of documents",
+   "placeholder": "Eg, Sale Deed No:"
+  },
+  {
+   "fieldname": "list_of_doc_no",
+   "fieldtype": "Data",
+   "label": "No"
+  },
+  {
+   "fieldname": "forced_distressed_value_for_market_land_rate",
+   "fieldtype": "Data",
+   "label": "Forced Distressed Value For Market For Market Land Rate"
+  },
+  {
+   "fieldname": "declaration_section",
+   "fieldtype": "Section Break",
+   "label": "declaration"
+  },
+  {
+   "fieldname": "property_undersigned",
+   "fieldtype": "Date",
+   "label": "i.The Property was inspected by the undersigned on - "
+  },
+  {
+   "fieldname": "date_of_valuation",
+   "fieldtype": "Date",
+   "label": "Date of valuation"
+  },
+  {
+   "fieldname": "approved_land_use",
+   "fieldtype": "Data",
+   "label": "Approved land use"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "net_cost_after_depreciation_1",
+   "fieldtype": "Float",
+   "label": "Net Cost After Depreciation"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-05 16:54:29.530087",
- "modified_by": "dharaneeshyuvaraj591@gmail.com",
+ "modified": "2026-02-02 11:30:04.408220",
+ "modified_by": "Administrator",
  "module": "Valuation App",
  "name": "Valuation",
  "owner": "dharaneeshyuvaraj591@gmail.com",
