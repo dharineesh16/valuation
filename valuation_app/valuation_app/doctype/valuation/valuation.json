@@ -176,7 +176,7 @@
   },
   {
    "fieldname": "latitudelongitude",
-   "fieldtype": "Geolocation",
+   "fieldtype": "Data",
    "label": "LatitudeLongitude"
   },
   {
@@ -873,7 +873,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-13 15:46:31.217761",
+ "modified": "2026-02-20 18:31:29.764061",
  "modified_by": "Administrator",
  "module": "Valuation App",
  "name": "Valuation",

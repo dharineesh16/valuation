@@ -2,7 +2,7 @@
   {
     "doc_type": "Valuation",
     "format": "Valuation Print Format",
-    "html": "valuation_print.html",
+    "html": "",
     "css": null,
     "formatter": null,
     "print_format_type": "Jinja",
