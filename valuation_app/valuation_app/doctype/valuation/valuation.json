@@ -9,11 +9,12 @@
   "name_of_the_current_owner",
   "property_details_section",
   "address",
-  "nearby",
   "latitudelongitude",
+  "nearby",
   "document_details_section",
   "layout_regularization",
   "legal_documents",
+  "name_of_approving_authority_2",
   "name_of_approving_authority",
   "column_break_rfcm",
   "approval_no_2",
@@ -75,34 +76,19 @@
   "m",
   "scaleable_area",
   "remo",
-  "yt",
-  "priya_p",
-  "hg",
-  "remo_r",
-  "jn",
-  "vidu_r",
-  "column_break_sonv",
-  "freedom",
-  "total_in_sft",
-  "to_total_in_sft",
+  "number_of_floors",
+  "floor_details",
   "as_per_approved_plan_section",
-  "cf_c",
-  "promo_p",
-  "dc",
-  "board_er",
-  "fr",
-  "youth_y",
-  "column_break_dnbx",
-  "fortness",
-  "cp_total_in_sft",
-  "sa_total_in_sft",
+  "number_of_floors_approved",
+  "floor_details_approved",
+  "floor_area_calculation_section",
+  "floor_area_calculation",
   "valuation_section",
   "fort",
   "as_per_guideline_value",
   "realisable_value_for_market_land_rate",
   "as_per_market_rate",
   "plinth_area_sft",
-  "floor_details",
   "rp_as_per_approved_plan",
   "ae_per_approved_plan",
   "vp_as_per_actual",
@@ -190,7 +176,7 @@
   },
   {
    "fieldname": "latitudelongitude",
-   "fieldtype": "Data",
+   "fieldtype": "Geolocation",
    "label": "LatitudeLongitude"
   },
   {
@@ -399,53 +385,9 @@
    "label": "As Per Actual"
   },
   {
-   "fieldname": "yt",
-   "fieldtype": "Float",
-   "label": "Plinth area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "hg",
-   "fieldtype": "Float",
-   "label": "Carpet area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "jn",
-   "fieldtype": "Float",
-   "label": "saleable Area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "column_break_sonv",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "freedom",
-   "fieldtype": "Float",
-   "label": "Total In Sft"
-  },
-  {
    "fieldname": "as_per_approved_plan_section",
    "fieldtype": "Section Break",
    "label": "As Per Approved Plan"
-  },
-  {
-   "fieldname": "dc",
-   "fieldtype": "Float",
-   "label": "Carpet area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "fr",
-   "fieldtype": "Float",
-   "label": "Saleable Area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "fortness",
-   "fieldtype": "Float",
-   "label": "Total In Sft"
   },
   {
    "fieldname": "valuation_section",
@@ -479,9 +421,41 @@
    "label": "Plinth area sft"
   },
   {
+   "default": "1",
+   "fieldname": "number_of_floors",
+   "fieldtype": "Select",
+   "label": "Number of Floors",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8"
+  },
+  {
    "fieldname": "floor_details",
-   "fieldtype": "Button",
-   "label": "Floor Details "
+   "fieldtype": "Table",
+   "label": "Floor Details",
+   "options": "Floor Detail"
+  },
+  {
+   "default": "1",
+   "fieldname": "number_of_floors_approved",
+   "fieldtype": "Select",
+   "label": "Number of Floors (Approved Plan)",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8"
+  },
+  {
+   "fieldname": "floor_details_approved",
+   "fieldtype": "Table",
+   "label": "Floor Details (Approved Plan)",
+   "options": "Floor Detail Approved"
+  },
+  {
+   "fieldname": "floor_area_calculation_section",
+   "fieldtype": "Section Break",
+   "label": "Floor Area Calculation"
+  },
+  {
+   "fieldname": "floor_area_calculation",
+   "fieldtype": "Table",
+   "label": "Floor Area Calculation",
+   "options": "Floor Area Calculation"
   },
   {
    "fieldname": "tron",
@@ -624,53 +598,6 @@
    "label": "Ft"
   },
   {
-   "fieldname": "priya_p",
-   "fieldtype": "Float",
-   "label": "Plinth Area"
-  },
-  {
-   "fieldname": "remo_r",
-   "fieldtype": "Float",
-   "label": "Carpet Area"
-  },
-  {
-   "fieldname": "vidu_r",
-   "fieldtype": "Float",
-   "label": "Saleable Area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "cf_c",
-   "fieldtype": "Float",
-   "label": "Plinth area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "promo_p",
-   "fieldtype": "Float",
-   "label": "Plinth area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "board_er",
-   "fieldtype": "Float",
-   "label": "Carpet area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "youth_y",
-   "fieldtype": "Float",
-   "label": "Saleable Area",
-   "precision": "2"
-  },
-  {
-   "fieldname": "column_break_dnbx",
-   "fieldtype": "Column Break",
-   "hidden": 1,
-   "print_hide": 1,
-   "report_hide": 1
-  },
-  {
    "fieldname": "dr_d",
    "fieldtype": "Int",
    "label": "Total Value"
@@ -724,26 +651,6 @@
    "fieldname": "as_per_plan",
    "fieldtype": "Heading",
    "label": "As Per Plan"
-  },
-  {
-   "fieldname": "total_in_sft",
-   "fieldtype": "Float",
-   "label": "Total In Sft"
-  },
-  {
-   "fieldname": "to_total_in_sft",
-   "fieldtype": "Float",
-   "label": "Total In Sft"
-  },
-  {
-   "fieldname": "cp_total_in_sft",
-   "fieldtype": "Float",
-   "label": "Total In Sft"
-  },
-  {
-   "fieldname": "sa_total_in_sft",
-   "fieldtype": "Float",
-   "label": "Total In Sft"
   },
   {
    "fieldname": "rate_for_sft",
@@ -956,12 +863,17 @@
    "fieldname": "net_cost_after_depreciation_1",
    "fieldtype": "Float",
    "label": "Net Cost After Depreciation"
+  },
+  {
+   "fieldname": "name_of_approving_authority_2",
+   "fieldtype": "Data",
+   "label": "name of approving authority"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-02 11:30:04.408220",
+ "modified": "2026-02-13 15:46:31.217761",
  "modified_by": "Administrator",
  "module": "Valuation App",
  "name": "Valuation",
