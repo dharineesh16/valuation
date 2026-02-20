@@ -1,0 +1,31 @@
+[
+  {
+    "doc_type": "Valuation",
+    "format": "Valuation Print Format",
+    "html": "valuation_print.html",
+    "css": null,
+    "formatter": null,
+    "print_format_type": "Jinja",
+    "raw_print_format": 0,
+    "disabled": 0,
+    "is_default": 1,
+    "letter_head": null,
+    "align_labels_left": 0,
+    "show_section_headings": 0,
+    "absolute_value": 0,
+    "font": "Default",
+    "font_size": 14,
+    "text_color": "#000000",
+    "background_color": "#ffffff",
+    "margin_top": 0,
+    "margin_bottom": 0,
+    "margin_left": 0,
+    "margin_right": 0,
+    "page_break": 0,
+    "rtl": 0,
+    "custom_format": 1,
+    "disabled_without_template": 0,
+    "doctype": "Print Format",
+    "name": "Valuation Print Format"
+  }
+]

@@ -1,0 +1,789 @@
+<div>
+<table class="no-border" style="margin-bottom: 6px;">
+    <tr>
+        <td style="padding:0;">
+            <img src="/private/files/WhatsApp Image 2026-01-30 at 12.54.50.jpeg"
+                 style="
+                    width:100%;
+                    max-height:120px;
+                    display:block;
+                 ">
+        </td>
+    </tr>
+</table>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Valuation Report</title>
+    <style>
+        /* ===============================
+           FRAPPE PREVIEW RESET (CRITICAL)
+           =============================== */
+        @media screen {
+            .print-preview-wrapper,
+            .print-preview {
+                padding: 0 !important;
+                margin: 0 auto !important;
+                width: auto !important;
+                transform: none !important;
+            }
+
+            .print-format {
+                width: 200mm !important;     /* Force A4 width */
+                min-height: 297mm !important;
+                margin: 8px auto !important;
+                padding: 10mm 6mm 3mm 6mm !important;
+            }
+        }
+
+        /* ===============================
+           PRINT (PDF)
+           =============================== */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Bookman Old Style', serif;
+        }
+
+        .print-format table { 
+            width: 100%; 
+            font-size: 10px; 
+            table-layout: auto; 
+            border-collapse: collapse;
+            border: none;
+            font-family: "Bookman Old Style", serif;
+        } 
+
+        .doc-row {
+            height: 50px;
+        }
+
+        .print-format td {
+            padding: 0px; 
+        } 
+
+        .print-format th {
+            padding-top: 2px !important;
+            padding-bottom: 2px !important;
+            line-height: 1.1 !important;
+        }
+
+        .print-format font { 
+            font-size: 10px; 
+        } 
+
+        .print-format { 
+            margin-top: 10mm; 
+            margin-left: 6mm; 
+            margin-right: 6mm; 
+            margin-bottom: 3mm; 
+        }
+
+        /* Border styles */
+        .border-all {
+            border: 1px solid #000000;
+        }
+
+        .border-top {
+            border-top: 1px solid #000000;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #000000;
+        }
+
+        .border-left {
+            border-left: 1px solid #000000;
+        }
+
+        .border-right {
+            border-right: 1px solid #000000;
+        }
+
+        .border-light {
+            border: 1px solid #1f1f1f;
+        }
+
+        /* Text alignment */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        /* Vertical alignment */
+        .valign-top {
+            vertical-align: top;
+        }
+
+        .valign-middle {
+            vertical-align: middle;
+        }
+
+        .valign-bottom {
+            vertical-align: bottom;
+        }
+
+        /* Background colors */
+        .bg-gray {
+            background-color: #D9D9D9;
+        }
+
+        .bg-white {
+            background-color: #FFFFFF;
+        }
+
+        /* Font sizes */
+        .font-size-3 {
+            font-size: 10px;
+        }
+
+        /* Page Break Control */
+        .page-break-before {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        .page-break-after {
+            page-break-after: always;
+            break-after: page;
+        }
+
+        .page-break-inside-avoid {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .no-page-break {
+            page-break-before: avoid;
+            page-break-after: avoid;
+            page-break-inside: avoid;
+            break-before: avoid;
+            break-after: avoid;
+            break-inside: avoid;
+        }
+
+        /* Print settings */
+        @media print {
+            @page {
+                size: A4;
+                margin: 10mm 6mm 0mm 6mm;
+            }
+
+            body {
+                margin: 0;
+            }
+
+            .print-format {
+                margin: 0;
+                padding: 0;
+                font-family: "Bookman Old Style", serif;
+            }
+
+            /* Force page breaks */
+            .page-break-before {
+                page-break-before: always !important;
+                break-before: page !important;
+            }
+
+            .page-break-after {
+                page-break-after: always !important;
+                break-after: page !important;
+            }
+
+            .page-break-inside-avoid {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .no-page-break {
+                page-break-before: avoid !important;
+                page-break-after: avoid !important;
+                page-break-inside: avoid !important;
+                break-before: avoid !important;
+                break-after: avoid !important;
+                break-inside: avoid !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="print-format">
+        <table>
+            <tr>
+                <td class="border-all" height="20" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="5" align="right" valign="bottom"><font face="Bookman Old Style" size="3">Name & Address of Branch :</font></td>
+                <td class="border-all" colspan="4" align="left" valign="bottom"><font face="Bookman Old Style" size="3">SBI Bank & Hosur Branch</font></td>
+                <td class="border-all" colspan="4" align="center" valign="bottom"><font face="Bookman Old Style" size="3">CIVIL TEC- Hosur</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" height="50" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="5" align="center" valign="middle"><font face="Bookman Old Style" size="3">Name of Customer (s)/ Borrowal unit :</font></td>
+                <td class="border-all" colspan="4" align="left" valign="middle"><b><font face="Bookman Old Style" size="3">{{ doc.name_of_the_current_owner }}</font></b></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3">Mob No: +91 9524320261, <br>9489984412<br>Mail:valuation.civiltec@gmail.com</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="9" align="center" valign="bottom"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="4" align="center" valign="bottom"><b><font face="Bookman Old Style" size="3">Ref No: CT/2025/Nov/060</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" rowspan="4" height="100" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">1</font></td>
+                <td class="border-all" colspan="13" align="left" valign="top"><i><font face="Bookman Old Style" size="3">Customer Details :</font></i></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Name of the current owner</font></td>
+                <td class="border-all" colspan="11" align="left" valign="middle"><b><font face="Bookman Old Style" size="3">{{ doc.name_of_the_current_owner }}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Proposed Owner Of Property</font></td>
+                <td class="border-all" colspan="11" align="left" valign="middle"><font face="Bookman Old Style" size="3">NA</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Apl No</font></td>
+                <td class="border-all" colspan="11" align="left" valign="bottom"><font face="Bookman Old Style" size="3"><br></font></td>
+            </tr>
+            <tr>
+                <td class="border-bottom border-left" rowspan="4" height="100" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">2</font></td>
+                <td class="border-all" colspan="13" align="left" valign="top"><font face="Bookman Old Style" size="3">Property Details :</font></td>
+            </tr>
+            <tr>
+                <td class="border-light" colspan="4" height="70" align="center" valign="middle"><font face="Bookman Old Style" size="3">Address</font></td>
+                <td class="border-all" colspan="9" align="left" valign="top"><b><font face="Bookman Old Style" size="3">{{ doc.address | default("") | replace('\n', '<br>') }}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-light" colspan="4" align="center" valign="top"><font face="Bookman Old Style" size="3">Nearby</font></td>
+                <td class="border-all" colspan="9" align="left" valign="top"><b><font face="Bookman Old Style" size="3">{{doc.nearby}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-light" colspan="4" align="center" valign="top"><font face="Bookman Old Style" size="3">Latitude, Longitude</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><b><font face="Bookman Old Style">{{ doc.latitudelongitude}}</font></b></td>
+            </tr>
+            <tr class="doc-row">
+                <td class="border-all" rowspan="5" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">3</font></b></td>
+                <td class="border-light" colspan="4" align="left" valign="top"><b><font face="Bookman Old Style" size="3">Document Details :</font></b></td>
+                <td class="border-light" colspan="2" align="left" valign="bottom"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-light" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Name of Approving Authority</font></td>
+                <td class="border-light" colspan="2" align="left" valign="bottom"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="2" align="left" valign="bottom"><font face="Bookman Old Style" size="3"><br></font></td>
+            </tr>
+            <tr class="doc-row">
+                <td class="border-light" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3">Layout Regularization</font></td>
+                <td class="border-light" colspan="2" align="left" valign="middle"><b><font face="Bookman Old Style"><b>Yes</b>/No</font></b></td>
+                <td class="border-light" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style">{{doc.name_of_approving_authority}}</font></b></td>
+                <td class="border-light" colspan="2" align="left" valign="middle"><font face="Bookman Old Style" size="3">Approval No</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style">{{doc.approval_no_2}}</font></b></td>
+            </tr>
+            <tr class="doc-row">
+                <td class="border-light" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3">Building Plan</font></td>
+                <td class="border-light" colspan="2" align="left" valign="middle"><b><font face="Bookman Old Style">Yes/No</font></b></td>
+                <td class="border-light" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style">{{doc.name_of_approving_authority}}</font></b></td>
+                <td class="border-light" colspan="2" align="left" valign="middle"><font face="Bookman Old Style" size="3">Approval No</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style">{{doc.approval_no_2}}</font></b></td>
+            </tr>
+            <tr class="doc-row">
+                <td class="border-light" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3">Construction Permission</font></td>
+                <td class="border-light" colspan="2" align="left" valign="middle"><b><font face="Bookman Old Style">Yes/No</font></b></td>
+                <td class="border-light" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style">{{doc.name_of_approving_authority}}</font></b></td>
+                <td class="border-light" colspan="2" align="left" valign="middle"><font face="Bookman Old Style" size="3">Approval No</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style">{{doc.approval_no_2}}</font></b></td>
+            </tr>
+            <tr class="doc-row">
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3">Legal Documents</font></td>
+                <td class="border-all" colspan="2" align="left" valign="middle"><b><font face="Bookman Old Style">Yes/No</font></b></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">List of Documents</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style">{{doc.list_of_documents}}</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style">{{doc.list_of_doc_no}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" rowspan="5" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000"></font></td>
+                <td class="border-light" colspan="13" align="left" valign="top"><font face="Bookman Old Style" size="3">Physical Details :</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="13" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">As Per Deed</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" rowspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Adjoining<br>Properties</font></td>
+                <td class="border-all" colspan="2" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">East</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style">{{doc.road}}</font></td>
+                <td class="border-all" colspan="2" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">West</font></b></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style">{{doc.park}}</font></td>
+                <td class="border-all" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">North</font></b></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style">{{doc.house}}</font></td>
+                <td class="border-all" colspan="2" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">South</font></b></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style">{{doc.proposed}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style">{{doc.pio}}ft</font></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style">{{doc.ol_p}}ft</font></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style">{{doc.hk_p}}ft</font></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style">{{doc.er_l}}ft</font></td>
+            </tr>
+        </table>
+
+        <!-- PAGE BREAK 1: After Adjoining Properties (As Per Deed) -->
+        <div class="page-break-before"></div>
+
+        <table>
+            <tr>
+                <td class="border-all" rowspan="6"  align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">4</font></td>
+                <td class="border-all" colspan="13" align="center" valign="top"><b><font face="Bookman Old Style" size="3" color="#000000">As Per Actual</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-light" rowspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Adjoining<br>Properties</font></td>
+                <td class="border-light" colspan="2" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="2">East</font></b></td>
+                <td class="border-light" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.fr_road}}</font></b></td>
+                <td class="border-light" colspan="2" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="2">West</font></b></td>
+                <td class="border-light" align="center" valign="middle"><b><font face="Bookman Old Style">{{doc.cc}}</font></b></td>
+                <td class="border-light" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="2">North</font></b></td>
+                <td class="border-all" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.vacant_load}}</font></b></td>
+                <td class="border-light" colspan="2" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="2">South</font></b></td>
+                <td class="border-all" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.sth_vacant_load}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-light" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.pravee_p}}ft</font></b></td>
+                <td class="border-light" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.retro_r}}ft</font></b></td>
+                <td class="border-light" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.repo_r}}ft</font></b></td>
+                <td class="border-all" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.prom_p}}ft</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-light" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Matching of<br>Boundaries</font></td>
+                <td class="border-light" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style">Yes/No</font></b></td>
+                <td class="border-light" colspan="2" align="center" valign="top"><font face="Bookman Old Style" size="3">Plot<br>Demarcated</font></td>
+                <td class="border-light" align="center" valign="middle"><b><font face="Bookman Old Style">Yes/No</font></b></td>
+                <td class="border-light" align="center" valign="middle"><font face="Bookman Old Style" size="3">Approv<br>ed land use</font></td>
+                <td class="border-light" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.approved_land_use}}</font></b></td>
+                <td class="border-light" colspan="2" align="left" valign="top"><font face="Bookman Old Style" size="3">Type of<br>Property</font></td>
+                <td class="border-all" align="center" valign="middle"><b><font face="Bookman Old Style">Plotted/<br>Flat</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-light" align="left" valign="middle"><font face="Bookman Old Style" size="3">No of rooms</font></td>
+                <td class="border-light" colspan="2" align="left" valign="middle"><font face="Bookman Old Style" size="3">Living/<br>Dining</font></td>
+                <td class="border-light" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.no_of_rooms}}</font></b></td>
+                <td class="border-light" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Bed<br>Rooms</font></td>
+                <td class="border-light" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.bed_rooms}}</font></b></td>
+                <td class="border-light" align="left" valign="middle"><font face="Bookman Old Style" size="3">Toilets</font></td>
+                <td class="border-light" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.toilets}}</font></b></td>
+                <td class="border-light" colspan="2" align="left" valign="middle"><font face="Bookman Old Style" size="3">Kitchen</font></td>
+                <td class="border-all" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.kitchen}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3">Total No of Floors</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.total_no_of_floors}}</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Floor on<br>which the property is located</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.floor_on_which_the_property_is_located}}</font></b></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3">Approx<br>age of the Property</font></td>
+                <td class="border-all" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.approx_age_of_the_property}}</font></b></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3">Residual<br>age of the Property</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" color="#000000">{{doc.residual_age_of_the_property}}</font></b></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style">-</font></td>
+            </tr>
+            <tr>
+                <td class="border-left border-right" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000">5</font></td>
+                <td class="border-all" colspan="13" align="left" valign="top"><b><font face="Bookman Old Style" size="3">Tenure I Occupancy Details :</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Status of Tenure</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Owned/Rented</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">No of years of Occupancy</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Relationship of tenant or owner</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.status_of_tenure}}</font></b></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.owned_rented}}</font></b></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.no_of_years_of_occupancy}}</font></b></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.relationship_of_tenantor_owner}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">6</font></td>
+                <td class="border-all" colspan="13" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Stage of Construction:</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="left" valign="top"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">Stage of Construction</font></b></td>
+                <td class="border-all" colspan="3" align="left" valign="middle"><b><font face="Bookman Old Style">{{doc.stage_of_construction}}</font></b></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">If under construction, extent of completion</font></b></td>
+                <td class="border-all" colspan="3" align="left" valign="middle"><b><font face="Bookman Old Style">{{doc.if_under_construction__extent_of_completion}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" rowspan="3" height="49" align="left" valign="top"><b><font face="Bookman Old Style" size="3" color="#000000">7</font></b></td>
+                <td class="border-all" colspan="13" align="left" valign="top"><b><font face="Bookman Old Style" size="3">Violations if any observed :</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="6" rowspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Nature and extent of violations</font></td>
+                <td class="border-all" colspan="4" align="right" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Horizontal Deviation:</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" color="#000000">{{ "%.0f"|format(doc.horizontal_deviation or 0) }}%</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="4" align="right" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Vertical Deviations</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" color="#000000">{{doc.vertical_deviation}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" rowspan="3" align="left" valign="top"><font face="Bookman Old Style" size="3" color="#000000">8</font></td>
+                <td class="border-light" colspan="13" align="left" valign="top"><font face="Bookman Old Style" size="3">Area Details of the property :</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3">Site Area - As Per Document</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.h}}</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Sft</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">Saleable Area</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.scaleable_area}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3">Site Area - As Per Actual</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.m}}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Sft</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td class="border-all" rowspan="45" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">9</font></b></td>
+                <td class="border-all" colspan="13" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">As Per Actual</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Plinth area</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Carpet Area</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Saleable Area</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Remarks</font></td>
+            </tr>
+            {% for row in doc.floor_details %}
+            <tr>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{ row.floor_type }}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style">{{ row.plinth_area }}</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style">{{ row.carpet_area }}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style">{{ row.saleable_area }}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" color="#000000">{{ row.remarks }}</font></td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td class="border-all" colspan="13" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">As Per Approved Plan</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Plinth area</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Carpet Area</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Saleable<br>Area</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Remark<br>s</font></td>
+            </tr>
+            {% for row in doc.floor_details_approved %}
+            <tr>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{ row.floor_type }}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style">{{ row.plinth_area }}</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style">{{ row.carpet_area }}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style">{{ row.saleable_area }}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" color="#000000">{{ row.remarks }}</font></td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td class="border-all" colspan="14" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">Valuation</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="3" align="center" valign="top"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="3" align="center" valign="top"><b><font face="Bookman Old Style" size="3" color="#000000">Land Area</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="top"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="2" align="center" valign="top"><b><font face="Bookman Old Style" size="3" color="#000000">Rate For Sft</font></b></td>
+                <td class="border-all" colspan="3" align="center" valign="top"><font face="Bookman Old Style" size="3" color="#000000">Total Value</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="left" valign="middle"><b>Total (A)</b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">As Per Guideline Value</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.as_per_guideline_value}}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">X</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.rate_for_sft}}</font></b></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.tron}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="left" valign="middle"><b>Total (A)</b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">As Per Market Rate</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.as_per_market_rate}}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">X</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.mr_rate_for_sft}}</font></b></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.dr_d}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="6" align="center" valign="middle">Realisable Value For Market Land Rate 90%</td>
+                <td class="border-all bg-white" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.realisable_value_for_market_land_rate}}</font></b></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Forced/Distressed Value For Market Land Rate 80%</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.forced_distressed_value_for_market_land_rate}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="7" align="left" valign="middle"><font face="Bookman Old Style" size="3">Plinth area (sft)</font></td>
+                <td class="border-all" colspan="3" rowspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">Rate</font></td>
+                <td class="border-all" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">Total As Per Approved Plan</font></b></td>
+                <td class="border-all" colspan="2" rowspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">Total As Per Actual</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Floor Details</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">As Per Approved Plan</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">As Per Actual</font></td>
+            </tr>
+            {% for row in doc.floor_area_calculation %}
+            {% if row.floor_type and row.floor_type != 'Total' %}
+            <tr>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{ row.floor_type }}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{ row.as_per_approved_plan }}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{ row.as_per_actual }}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{ row.rate }}</font></b></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{ row.total_as_per_approved_plan }}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{ row.total_as_per_actual }}</font></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+            {% set total_approved = namespace(value=0) %}
+            {% set total_actual = namespace(value=0) %}
+            {% for row in doc.floor_area_calculation %}
+                {% if row.floor_type and row.floor_type != 'Total' %}
+                    {% if row.total_as_per_approved_plan %}
+                        {% set total_approved.value = total_approved.value + row.total_as_per_approved_plan %}
+                    {% endif %}
+                    {% if row.total_as_per_actual %}
+                        {% set total_actual.value = total_actual.value + row.total_as_per_actual %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <tr>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3">Total</font></td>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3">{{ total_approved.value }}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{ total_actual.value }}</font></td>
+            </tr>
+            <tr>
+                <td class="border-top border-bottom" align="center" valign="middle"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-top border-bottom" align="center" valign="middle"><font face="Bookman Old Style" size="3"><br></font></td>
+                <td class="border-all" colspan="8" align="right" valign="bottom"><font face="Bookman Old Style" size="3">Depreciation @ 0%</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">₹0.0</font></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000"></font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">Total (B)</font></b></td>
+                <td class="border-all" colspan="8" align="right" valign="bottom"><font face="Bookman Old Style" size="3">Net Cost After Depreciation</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.net_cost_after_depreciation}}</font></b></td>
+                <td class="border-all"  align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.net_cost_after_depreciation_1}}</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="2" rowspan="4" align="center" valign="middle"><b><font size="3" color="#000000">Amenities (C)</font></b></td>
+                <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Water Sump</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.water_sump}}</font></td>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.lo_l}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Septic Tank</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.septic_tank}}</font></td>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.ty_t}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Bore</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.bore}}</font></td>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.tl_t}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Head Room</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.head_room}}</font></td>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.mn_m}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-bottom border-left" align="center" valign="middle"><b><font size="3" color="#000000"><br></font></b></td>
+                <td class="border-bottom border-right" align="center" valign="middle"><b><font size="3" color="#000000"><br></font></b></td>
+                <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Amenities ©</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.amentities}}</font></b></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.jkl_j}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="10" align="right" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">Total Building Value + Amenities</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.total_buliding_value_amentities}}</font></td>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.jk_total_buliding_amentities}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all bg-gray" colspan="10" align="right" valign="middle"><b><font face="Bookman Old Style" size="3">Total (A+B+C) - Guide Line Value</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.total_guide_line}}</font></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.iopl_total_guide_line}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="10" align="right" valign="middle"><b><font face="Bookman Old Style" size="3">Total (A+B+C) Fair Market Value</font></b></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.total_fair_market_value}}</font></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.khj_total_fair_market}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="10" align="right" valign="middle"><font face="Bookman Old Style" size="3">Realizable Value 90%</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.realizable_value}}</font></td>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.piol_realizable_value}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="10" align="right" valign="middle"><font face="Bookman Old Style" size="3">Forced/Distressed Value 80%</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.forced_distressed_value}}</font></td>
+                <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.yuo_forced_distressed_value}}</font></td>
+            </tr>
+             <tr>
+                <td class="border-all" colspan="14" height="19" align="center" valign="bottom"><font color="#000000"><br></font></td>
+            </tr>
+        </table>
+
+        <!-- PAGE BREAK 4: After Valuation Section -->
+        <div class="page-break-before"></div>
+
+        <table>
+            <tr>
+                <td class="border-all" height="130" align="center" valign="top"><font face="Bookman Old Style" size="3" color="#000000">10</font></td>
+                <td class="border-light" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">Assumption<br>/Remarks</font></b></td>
+                <td class="border-all" colspan="11" align="left" valign="top"><font face="Bookman Old Style" size="3">i. Qualifications in TIR/Mitigation suggested, if any - No<br>ii. Property is SARFAESI compliant:. - Yes<br>iii. Whether property Belonging to social infrastructure like hospital, school, old age home etc. - No<br>iv. Whether entire piece of land on which the unit is set up / property is situated has been mortgaged or to be mortgaged. - To Be Mortaged<br>v. Details of last two transactions in the locality/area to be provided, if available. - No<br>vi. Any other aspect which has relevance on the value or marketability of the property - Nil</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" height="120" align="center" valign="top"><font face="Bookman Old Style" size="3" color="#000000">11</font></td>
+                <td class="border-light" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">Declaration</font></b></td>
+                <td class="border-all" colspan="11" align="left" valign="middle"><b><font face="Bookman Old Style" size="3">i. The property was inspected by the undersigned on - {{ frappe.utils.get_datetime(doc.property_undersigned).strftime('%d.%m.%Y') }}<br>ii. The undersigned does not have any direct/indirect interest in the above property<br>iii. The information furnished herein is true and correct to the best of our knowledge.<br>iv. I have submitted Valuation report directly to the Bank</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" rowspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">12</font></td>
+                <td class="border-all" colspan="5" rowspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Name address & signature of valuer with Wealth Tax Registration No. 14/21</font></td>
+                <td class="border-all" colspan="4" rowspan="2" align="center" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000">Signature of the valuer</font></td>
+                <td class="border-all" colspan="4" align="center" valign="top"><font face="Bookman Old Style" size="3" color="#000000">Date of Valuation:</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" colspan="4" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{ frappe.utils.get_datetime(doc.date_of_valuation).strftime('%d.%m.%Y') }}</font></b></td>
+            </tr>
+        </table>
+
+        <!-- PAGE BREAK 5: After Row 12 -->
+        <div class="page-break-before"></div>
+
+        <table>
+            <tr>
+                <td class="border-all"align="center" valign="bottom"><b><font face="Bookman Old Style" size="3" color="#000000">13</font></b></td>
+                <td class="border-all" colspan="13" align="left" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">Enclosure :</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3">a)</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Layout plan sketch of the area in which the property is<br>located with latitude and longitude</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Yes Enclosed</font></td>
+            </tr>
+            <tr>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3">b)</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Building Plan</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Yes Enclosed</font></td>
+            </tr>
+            <tr>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3">c)</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Floor Plan</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Nil</font></td>
+            </tr>
+            <tr>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3">d)</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Photograph of the property (including geo-stamping with<br>date) and owner (in case of housing loans, if borrower is available) including a "Selfie' of the Valuer at the site</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Yes</font></td>
+            </tr>
+            <tr>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3">e)</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Certified copy of the approved / sanctioned plan wherever<br>applicable from the concerned office</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">yes</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Google Map location of the property, Longitude/Latitude<br>and co-ordinates of the property.</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Yes</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3">f)</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Price trend of the Property in the locality/city from property<br>search sites viz Magickbricks.com, 99Acres.com, Makan.com etc</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Not Available</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3">h)</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Special remarks, if any, like threat of acquisition of land<br>for public service purposes, road widening or applicability of GRZ provisions etc. (Distance from sea-coast / tidal level must be incorporated) if any</font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Nil</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3">i)</font></td>
+                <td class="border-all" colspan="9" align="left" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Any other relevant documents/ extracts</font></td>
+                <td class="border-all" colspan="4" align="center" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000">Nil</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">14</font></b></td>
+                <td class="border-all" colspan="13" align="left" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">Remarks:</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all"  align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">i)</font></td>
+                <td class="border-all" colspan="13" align="left" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000"><br>Under Construction Of Ground And First Floor</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">ii)</font></td>
+                <td class="border-all" colspan="13" align="left" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000"><br>Presently Ground And First Floor Inner Plasting Completed(75% Of Work Completed)</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">iii)</font></td>
+                <td class="border-all" colspan="13" align="left" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000"><br>GF-1 BHK (1 Unit), FF-3BH (1 Unit) Total-2 Units</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-left border-right"  align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-right" colspan="13" align="left" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">Summary Of Valuation :</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-left border-right" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="7" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">As Per Plan</font></b></td>
+                <td class="border-all" colspan="6" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">As Per Actual</font></b></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">GLR Value</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.uoyt_glr_value}}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">GLR Value</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.glr_value}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all"  align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Market Value</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.iuyt_market_value}}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Fair Market Value</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.fair_market}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Realisable Value (90%)</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.uyt_realisable_value}}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Realisable Value (90%)</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.realisable_value}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-all" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Distress Sale Value (80%)</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.iutyre_distress_sale_value}}</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Distress Sale Value (80%)</font></td>
+                <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.ip_distress_sale_value}}</font></td>
+            </tr>
+            <tr>
+                <td class="border-left border-right" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Place:</font></td>
+                <td colspan="2" align="left" class="border-right" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000">Hosur</font></td>
+                <td class="border-right" colspan="8" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td class="border-left border-right " align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Date:</font></td>
+                <td colspan="2" align="left" class="border-right" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000">{{ frappe.utils.get_datetime(doc.date).strftime('%d.%m.%Y') }}</font></td>
+                <td class="border-right" colspan="8" rowspan="4" align="center" valign="top"><font face="Bookman Old Style" color="#000000">Signature<br>(Name and Official seal of the Approved Valuer)</font></td>
+            </tr>
+            <tr>
+                <td class="border-left border-right border-bottom" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td colspan="13" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td class="border-left border-right border-bottom " rowspan="2" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
+                <td class="border-all" colspan="12" rowspan="2" align="left" valign="middle"><font face="Bookman Old Style" size="8" color="#000000"><b>Note:Market Value is Higher than the 20% of<br>Guideline Value. We Have Given Market Value <br>Depends on Approved Layout with Surronding <br>Developments of Residental Buildings <br></b></font></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html

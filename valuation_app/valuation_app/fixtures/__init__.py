@@ -1,32 +1,17 @@
-from . import __version__ as app_version
+# Fixtures for Valuation App
+import frappe
+import os
 
-app_name = "valuation_app"
-app_title = "Valuation App"
-app_publisher = "Civil Tec Hosur"
-app_description = "Property Valuation Application"
-app_icon = "octicon octicon-file-directory"
-app_color = "blue"
-app_email = "valuation.civiltec@gmail.com"
-app_license = "MIT"
+def get_print_format_data():
+    """Return print format configuration"""
+    return []
 
-# Includes in <head>
-# ------------------
-
-app_include_css = "/assets/valuation_app/css/valuation.css"
-app_include_js = "/assets/valuation_app/js/valuation.js"
-
-# Fixtures
-# --------
-fixtures = []
-
-def after_install(app):
+def after_install():
     """Create default print format after app installation"""
     create_valuation_print_format()
 
 def create_valuation_print_format():
     """Create the Valuation Print Format"""
-    import frappe
-    import os
     
     # Check if print format already exists
     if frappe.db.exists("Print Format", "Valuation Print Format"):
@@ -52,6 +37,8 @@ def create_valuation_print_format():
         "doc_type": "Valuation",
         "format": "Valuation Print Format",
         "html": html,
+        "css": None,
+        "formatter": None,
         "print_format_type": "Jinja",
         "raw_print_format": 0,
         "disabled": 0,
@@ -59,8 +46,5 @@ def create_valuation_print_format():
         "custom_format": 1
     })
     
-    try:
-        print_format.insert(ignore_permissions=True)
-        frappe.db.commit()
-    except Exception as e:
-        frappe.log_error(f"Error creating print format: {e}")
+    print_format.insert(ignore_permissions=True)
+    frappe.db.commit()
