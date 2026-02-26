@@ -73,12 +73,6 @@ frappe.ui.form.on('Valuation', {
     // -----------------------------
     // APPROVED / ACTUAL
     // -----------------------------
-    ae_per_approved_plan: recalculate_all,
-    rp_as_per_approved_plan: recalculate_all,
-    as_per_actual_2: recalculate_all,
-    vp_as_per_actual: recalculate_all,
-    rate_2: recalculate_all,
-    iu_i: recalculate_all,
 
     // -----------------------------
     // AMENITIES
@@ -360,7 +354,6 @@ function make_total_row_readonly(frm, table_fieldname) {
 
 function recalculate_all(frm) {
     calculate_guideline_market(frm);
-    calculate_approved_actual(frm);
     calculate_amenities_and_totals(frm);
     calculate_deviations(frm);
     calculate_summary(frm);
@@ -451,10 +444,6 @@ function calculate_floor_totals(frm) {
         frm.refresh_field('floor_details');
     }
 
-    frm.set_value('vp_as_per_actual', total_plinth);
-    frm.set_value('as_per_actual_2',  total_carpet);
-    frm.refresh_field('vp_as_per_actual');
-    frm.refresh_field('as_per_actual_2');
 }
 
 /* =====================================================
@@ -542,10 +531,6 @@ function calculate_floor_totals_approved(frm) {
         frm.refresh_field('floor_details_approved');
     }
 
-    frm.set_value('ae_per_approved_plan',    total_plinth);
-    frm.set_value('rp_as_per_approved_plan', total_carpet);
-    frm.refresh_field('ae_per_approved_plan');
-    frm.refresh_field('rp_as_per_approved_plan');
 }
 
 /* =====================================================
@@ -560,25 +545,11 @@ function calculate_guideline_market(frm) {
 }
 
 /* =====================================================
-   APPROVED & ACTUAL
+=====================================================
+   AMENITIES & TOTALS
 ===================================================== */
 
-function calculate_approved_actual(frm) {
-    const hit       = n(frm.doc.ae_per_approved_plan)    * n(frm.doc.rate_2);
-    const float_htmj = n(frm.doc.rp_as_per_approved_plan) * n(frm.doc.iu_i);
-    const jack      = n(frm.doc.vp_as_per_actual)        * n(frm.doc.rate_2);
-    const ip_i      = n(frm.doc.as_per_actual_2)         * n(frm.doc.iu_i);
-
-    frm.set_value('hit',        hit);
-    frm.set_value('float_htmj', float_htmj);
-    frm.set_value('jack',       jack);
-    frm.set_value('ip_i',       ip_i);
-    frm.set_value('ravi',       hit + float_htmj);
-    frm.set_value('ipl_i',      jack + ip_i);
-}
-
-/* =====================================================
-   AMENITIES & TOTALS
+/*   AMENITIES & TOTALS
 ===================================================== */
 
 function calculate_amenities_and_totals(frm) {

@@ -16,7 +16,6 @@ class Valuation(Document):
         # Update floor_area_calculation WITHOUT regenerating rows
         self.update_floor_area_calculation()
         self.calculate_guideline_market()
-        self.calculate_approved_actual()
         self.amenities_calculations()
         self.calculate_deviations()
         self.summary_of_calculations()
@@ -69,8 +68,6 @@ class Valuation(Document):
                 total_carpet += flt(floor.carpet_area)
                 total_saleable += flt(floor.saleable_area)
 
-        self.vp_as_per_actual = total_plinth
-        self.as_per_actual_2 = total_carpet
 
         if total_row is not None:
             total_row.floor_type = 'Total in Sq.Ft'
@@ -99,8 +96,6 @@ class Valuation(Document):
                 total_carpet_approved += flt(floor.carpet_area)
                 total_saleable_approved += flt(floor.saleable_area)
 
-        self.ae_per_approved_plan = total_plinth_approved
-        self.rp_as_per_approved_plan = total_carpet_approved
 
         if total_row is not None:
             total_row.floor_type = 'Total in Sq.Ft'
@@ -179,20 +174,6 @@ class Valuation(Document):
     # APPROVED VS ACTUAL
     # -------------------------------------------------
 
-    def calculate_approved_actual(self):
-        self.hit = flt(self.ae_per_approved_plan) * flt(self.rate_2)
-        self.float_htmj = flt(self.rp_as_per_approved_plan) * flt(self.iu_i)
-
-        self.jack = flt(self.vp_as_per_actual) * flt(self.rate_2)
-        self.ip_i = flt(self.as_per_actual_2) * flt(self.iu_i)
-
-        self.ravi = self.hit + self.float_htmj
-        self.ipl_i = self.jack + self.ip_i
-
-    # -------------------------------------------------
-    # AMENITIES
-    # -------------------------------------------------
-
     def amenities_calculations(self):
         self.amentities = (
             flt(self.water_sump)
@@ -269,6 +250,7 @@ class Valuation(Document):
             self.horizontal_deviation = round(actual_pct - approved_pct, 0)
         else:
             self.horizontal_deviation = 0
+            
 
     # -------------------------------------------------
     # SUMMARY (FIELD ASSIGNMENTS ONLY)
