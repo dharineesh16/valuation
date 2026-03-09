@@ -4,6 +4,63 @@
 import frappe
 from frappe.model.document import Document
 from frappe.utils import flt
+import json
+
+
+@frappe.whitelist()
+def calculate_deviations_js(scaleable_area, number_of_floors, number_of_floors_approved, floor_details, floor_details_approved):
+    """
+    Calculate deviations from client-side JavaScript
+    This is called via frappe.call to ensure proper value propagation
+    """
+    import frappe
+    frappe.flags.in_test = True  # Ensure logging works
+    
+    sa = flt(scaleable_area)
+    nf = int(number_of_floors) if number_of_floors else 1
+    nfa = int(number_of_floors_approved) if number_of_floors_approved else 1
+    
+    frappe.publish_realtime('msgprint', {'message': f'Deviation calc: sa={sa}, nf={nf}, nfa={nfa}'}, user='Administrator')
+    
+    # Parse floor_details
+    actual_ground = 0
+    if floor_details:
+        if isinstance(floor_details, str):
+            floor_details = json.loads(floor_details)
+        for f in floor_details:
+            if f.get('floor_type') and f.get('floor_type', '').strip().lower() == 'ground floor':
+                actual_ground = flt(f.get('plinth_area'))
+                break
+    
+    # Parse floor_details_approved
+    approved_ground = 0
+    if floor_details_approved:
+        if isinstance(floor_details_approved, str):
+            floor_details_approved = json.loads(floor_details_approved)
+        for f in floor_details_approved:
+            if f.get('floor_type') and f.get('floor_type', '').strip().lower() == 'ground floor':
+                approved_ground = flt(f.get('plinth_area'))
+                break
+    
+    frappe.publish_realtime('msgprint', {'message': f'Deviation calc: actual_ground={actual_ground}, approved_ground={approved_ground}'}, user='Administrator')
+    
+    # Calculate horizontal deviation
+    if sa:
+        actual_pct = (actual_ground / sa) * 100
+        approved_pct = (approved_ground / sa) * 100
+        horizontal_deviation = round(actual_pct - approved_pct, 0)
+    else:
+        horizontal_deviation = 0
+    
+    # Calculate vertical deviation
+    vertical_deviation = round(((nf / nfa) * 100) - 100, 2)
+    
+    frappe.publish_realtime('msgprint', {'message': f'Deviation result: h={horizontal_deviation}, v={vertical_deviation}'}, user='Administrator')
+    
+    return {
+        'horizontal_deviation': horizontal_deviation,
+        'vertical_deviation': vertical_deviation
+    }
 
 
 class Valuation(Document):
@@ -225,6 +282,11 @@ class Valuation(Document):
         E49 = Ground Floor plinth area from floor_details       (As Per Actual)
         E54 = Ground Floor plinth area from floor_details_approved (As Per Approved Plan)
         L45 = scaleable_area (Saleable Area)
+
+        Vertical Deviation % uses number of floors comparison.
+        Formula: =((R39/R37*100%)-(R37/R37*100%))
+        R39 = number_of_floors (As Per Actual)
+        R37 = number_of_floors_approved (As Per Approved Plan)
         """
         scaleable_area = flt(self.scaleable_area)
 
@@ -250,7 +312,17 @@ class Valuation(Document):
             self.horizontal_deviation = round(actual_pct - approved_pct, 0)
         else:
             self.horizontal_deviation = 0
-            
+
+        # Vertical Deviation: =((R39/R37*100%)-(R37/R37*100%))
+        # = (number_of_floors / number_of_floors_approved * 100) - 100
+        # Select field default is '1', so fall back to 1 (not 0) when unset
+        # Example: R39=5, R37=6 -> (5/6*100) - 100 = 83.33 - 100 = -16.67%
+        number_of_floors          = int(self.number_of_floors)          if self.number_of_floors          else 1
+        number_of_floors_approved = int(self.number_of_floors_approved) if self.number_of_floors_approved else 1
+
+        self.vertical_deviation = round(
+            ((number_of_floors / number_of_floors_approved) * 100) - 100, 2
+        )
 
     # -------------------------------------------------
     # SUMMARY (FIELD ASSIGNMENTS ONLY)

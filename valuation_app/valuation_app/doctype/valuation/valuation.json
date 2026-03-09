@@ -16,35 +16,28 @@
   "name_of_approving_authority_2",
   "name_of_approving_authority",
   "column_break_rfcm",
-  "approval_no_2",
   "list_of_documents",
+  "approval_no_2",
+  "approval_nosecond_third",
   "list_of_doc_no",
   "physical_details_section",
   "as_per_deed",
-  "East_side_property_1",
+  "east_side_property_1",
   "pio",
-  "West_side_property_1",
-  "park",
+  "west_side_property_1",
   "ol_p",
-  "North_side_property_1",
-  "house",
+  "north_side_property_1",
   "hk_p",
-  "South_side_property_1",
-  "proposed",
+  "south_side_property_1",
   "er_l",
   "trio",
-  "adjoin_properties",
-  "East_side_property_2",
-  "fr_road",
+  "east_side_property_2",
   "pravee_p",
-  "West_side_property_2",
-  "cc",
+  "west_side_property_2",
   "retro_r",
-  "North_side_property_2",
-  "vacant_load",
+  "north_side_property_2",
   "repo_r",
-  "South_side_property_2",
-  "sth_vacant_load",
+  "south_side_property_2",
   "prom_p",
   "approved_land_use",
   "column_break_bxeg",
@@ -101,7 +94,7 @@
   "total_guide_line",
   "total_fair_market_value",
   "realizable_value",
- "forced_distressed_value",
+  "forced_distressed_value",
   "column_break_lztz",
   "net_cost_after_depreciation_1",
   "lo_l",
@@ -113,7 +106,7 @@
   "iopl_total_guide_line",
   "khj_total_fair_market",
   "piol_realizable_value",
- "yuo_forced_distressed_value",
+  "yuo_forced_distressed_value",
   "declaration_section",
   "property_undersigned",
   "date_of_valuation",
@@ -174,12 +167,6 @@
    "placeholder": "Name of Approving Authority"
   },
   {
-   "fieldname": "legal_documents",
-   "fieldtype": "Heading",
-   "label": "Legal Documents",
-   "placeholder": "Eg: Sale Deed No:"
-  },
-  {
    "fieldname": "column_break_rfcm",
    "fieldtype": "Column Break"
   },
@@ -192,46 +179,6 @@
    "fieldname": "as_per_deed",
    "fieldtype": "Heading",
    "label": "As Per Deed"
-  },
-  {
-   "fieldname": "East_side_property_1",
-   "fieldtype": "Data",
-   "label": "East side property"
-  },
-  {
-   "fieldname": "West_side_property_1",
-   "fieldtype": "Data",
-   "label": "West side property"
-  },
-  {
-   "fieldname": "North_side_property_1",
-   "fieldtype": "Data",
-   "label": "North side property"
-  },
-  {
-   "fieldname": "South_side_property_1",
-   "fieldtype": "Data",
-   "label": "South side property"
-  },
-  {
-   "fieldname": "East_side_property_2",
-   "fieldtype": "Data",
-   "label": "East side property"
-  },
-  {
-   "fieldname": "West_side_property_2",
-   "fieldtype": "Data",
-   "label": "West side property"
-  },
-  {
-   "fieldname": "North_side_property_2",
-   "fieldtype": "Data",
-   "label": "North side property"
-  },
-  {
-   "fieldname": "South_side_property_2",
-   "fieldtype": "Data",
-   "label": "South side property"
   },
   {
    "fieldname": "no_of_rooms",
@@ -329,13 +276,15 @@
   },
   {
    "fieldname": "horizontal_deviation",
-   "fieldtype": "Int",
-   "label": "Horizontal Deviation"
+   "fieldtype": "Float",
+   "label": "Horizontal Deviation (%)",
+   "precision": "2"
   },
   {
    "fieldname": "vertical_deviation",
-   "fieldtype": "Int",
-   "label": "Vertical Deviation"
+   "fieldtype": "Float",
+   "label": "Vertical Deviation (%)",
+   "precision": "2"
   },
   {
    "fieldname": "trio",
@@ -696,9 +645,14 @@
    "placeholder": "Eg, Sale Deed No:"
   },
   {
-   "fieldname": "list_of_doc_no",
-   "fieldtype": "Data",
-   "label": "No (last in approval no)"
+    "fieldname": "approval_nosecond_third",
+    "fieldtype": "Data",
+    "label": "Approval No(second)(third)"
+  },
+  {
+    "fieldname": "list_of_doc_no",
+    "fieldtype": "Data",
+    "label": "Approval No(last one)"
   },
   {
    "fieldname": "declaration_section",
@@ -729,12 +683,52 @@
    "fieldname": "name_of_approving_authority_2",
    "fieldtype": "Data",
    "label": "name of approving authority"
+  },
+  {
+   "fieldname": "east_side_property_1",
+   "fieldtype": "Data",
+   "label": "East side property"
+  },
+  {
+   "fieldname": "west_side_property_1",
+   "fieldtype": "Data",
+   "label": "West side property"
+  },
+  {
+   "fieldname": "north_side_property_1",
+   "fieldtype": "Data",
+   "label": "North side property"
+  },
+  {
+   "fieldname": "south_side_property_1",
+   "fieldtype": "Data",
+   "label": "South side property"
+  },
+  {
+   "fieldname": "east_side_property_2",
+   "fieldtype": "Data",
+   "label": "East side property"
+  },
+  {
+   "fieldname": "west_side_property_2",
+   "fieldtype": "Data",
+   "label": "West side property"
+  },
+  {
+   "fieldname": "north_side_property_2",
+   "fieldtype": "Data",
+   "label": "North side property"
+  },
+  {
+   "fieldname": "south_side_property_2",
+   "fieldtype": "Data",
+   "label": "South side property"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-02-25 18:06:20.332151",
+ "modified": "2026-03-06 11:39:50.952362",
  "modified_by": "Administrator",
  "module": "Valuation App",
  "name": "Valuation",
@@ -749,6 +743,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
    "share": 1,
    "write": 1
   }

@@ -1,0 +1,916 @@
+[
+ {
+  "client_script": null,
+  "docstatus": 0,
+  "doctype": "DocType Layout",
+  "document_type": "Valuation",
+  "fields": [
+   {
+    "fieldname": "customer_details_section",
+    "label": "Customer Details",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "name_of_the_current_owner",
+    "label": "Name of the current owner",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "property_details_section",
+    "label": "Property Details",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "address",
+    "label": "Address",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "nearby",
+    "label": "Nearby",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "latitudelongitude",
+    "label": "LatitudeLongitude",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "document_details_section",
+    "label": "Document Details ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "layout_regularization",
+    "label": "Layout Regularization",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "legal_documents",
+    "label": "Legal Documents",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "name_of_approving_authority_2",
+    "label": "name of approving authority",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "name_of_approving_authority",
+    "label": "name of approving authority",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "column_break_rfcm",
+    "label": null,
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "approval_no_2",
+    "label": "Approval No",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "list_of_documents",
+    "label": "list of documents",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "list_of_doc_no",
+    "label": "No",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "physical_details_section",
+    "label": "Physical Details",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "as_per_deed",
+    "label": "As Per Deed",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "adjoining_properties",
+    "label": "adjoining properties",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "east",
+    "label": "East",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "road",
+    "label": "road",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "pio",
+    "label": "Ft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "west",
+    "label": "West",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "park",
+    "label": "park",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "ol_p",
+    "label": "Ft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "north",
+    "label": "North",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "house",
+    "label": "house",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "hk_p",
+    "label": "Ft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "south",
+    "label": "South",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "proposed",
+    "label": "proposed",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "er_l",
+    "label": "Ft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "trio",
+    "label": "As Per Actual",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "adjoin_properties",
+    "label": "adjoining properties",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "k",
+    "label": "East",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "fr_road",
+    "label": "road",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "pravee_p",
+    "label": "Ft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "l",
+    "label": "West",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "cc",
+    "label": "CC",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "retro_r",
+    "label": "Ft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "o",
+    "label": "North",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "vacant_load",
+    "label": "vacant land",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "repo_r",
+    "label": "Ft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "p",
+    "label": "South",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "sth_vacant_load",
+    "label": "vacant land",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "prom_p",
+    "label": "Ft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "approved_land_use",
+    "label": "Approved land use",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "column_break_bxeg",
+    "label": null,
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "no_of_rooms",
+    "label": "No of rooms",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "bed_rooms",
+    "label": "Bed Rooms",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "toilets",
+    "label": "Toilets",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "kitchen",
+    "label": "Kitchen",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "floor_on_which_the_property_is_located",
+    "label": "Floor on Which the Property is located ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "total_no_of_floors",
+    "label": "Total No of Floors",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "approx_age_of_the_property",
+    "label": "Approx age of the Property ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "residual_age_of_the_property",
+    "label": "Residual age of the Property",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "tenure_occupancy_details_section",
+    "label": "Tenure Occupancy Details",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "status_of_tenure",
+    "label": "Status of Tenure",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "owned_rented",
+    "label": "Owned Rented",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "no_of_years_of_occupancy",
+    "label": "No of years of occupancy",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "relationship_of_tenantor_owner",
+    "label": "Relationship of tenantor owner ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "stage_of_construction_section",
+    "label": "Stage of Construction",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "stage_of_construction",
+    "label": "Stage of Construction",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "if_under_construction__extent_of_completion",
+    "label": "If under construction  extent of completion",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "violations_if_any_observed_section",
+    "label": "Violations if any observed ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "nature_and_extend_of_violations",
+    "label": "Nature and extend of violations",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "vertical_deviation",
+    "label": "Vertical Deviation",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "horizontal_deviation",
+    "label": "Horizontal Deviation",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "area_details_of_the_property_section",
+    "label": "Area Details of the Property",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "h",
+    "label": "Site Area As Per Document",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "m",
+    "label": "Site Area  As Per actual",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "scaleable_area",
+    "label": "Saleable Area",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "remo",
+    "label": "As Per Actual",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "number_of_floors",
+    "label": "Number of Floors",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "floor_details",
+    "label": "Floor Details",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "as_per_approved_plan_section",
+    "label": "As Per Approved Plan",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "number_of_floors_approved",
+    "label": "Number of Floors (Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "floor_details_approved",
+    "label": "Floor Details (Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "valuation_section",
+    "label": "Valuation",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "fort",
+    "label": "Total A",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "as_per_guideline_value",
+    "label": "As Per Guideline Value",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "rate_for_sft",
+    "label": "Rate For Sft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "tron",
+    "label": "Total Value",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "as_per_market_rate",
+    "label": "As Per Market Rate",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "mr_rate_for_sft",
+    "label": "Rate For Sft",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "dr_d",
+    "label": "Total Value",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "realisable_value_for_market_land_rate",
+    "label": "Realisable Value For Market Land Rate 90% ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "forced_distressed_value_for_market_land_rate",
+    "label": "Forced Distressed Value For Market For Market Land Rate 80%",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "floor_area_calculation_section",
+    "label": "Floor Area Calculation",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "floor_area_calculation",
+    "label": "Floor Area Calculation",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "total_b_section",
+    "label": "Total (B)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "net_cost_after_depreciation",
+    "label": "Net Cost After Depreciation (Total As Per Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "net_cost_after_depreciation_1",
+    "label": "Net Cost After Depreciation (Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "amenities_section",
+    "label": "Amenities",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "water_sump",
+    "label": "Water Sump (Total As Per Approved plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "septic_tank",
+    "label": "Septic Tank (Total As Per Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "bore",
+    "label": "Bore (Total As Per Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "head_room",
+    "label": "Head Room (Total As Per Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "amentities",
+    "label": "Amentities (Total As Per Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "total_buliding_value_amentities",
+    "label": "Total Building Value  Amentities (Total As Per Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "total_guide_line",
+    "label": "Total(A+B+C)- Guide Line Value (Total As Per Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "total_fair_market_value",
+    "label": "Total(A+B+C) Fair Market Value(Total As Approved Plan) ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "realizable_value",
+    "label": "Realizable Value 90%(Total As Per Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "forced_distressed_value",
+    "label": "Forced Distressed Value 80%(Total As Approved Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "column_break_lztz",
+    "label": null,
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "lo_l",
+    "label": "Water Sump (Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "ty_t",
+    "label": "Sepatic Tank (Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "tl_t",
+    "label": "Bore(Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "mn_m",
+    "label": "Head Room (Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "jkl_j",
+    "label": "Amenities (Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "jk_total_buliding_amentities",
+    "label": "Total Building Value Amentities(Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "iopl_total_guide_line",
+    "label": "Total(A+B+C) - Guide Line Value(Total As Per Plan)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "khj_total_fair_market",
+    "label": "Total(A+B+C) Fair Market Value(Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "piol_realizable_value",
+    "label": "Realizable Value 90%(Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "yuo_forced_distressed_value",
+    "label": "Forced Distressed Value 80%(Total As Per Actual)",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "declaration_section",
+    "label": "declaration",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "property_undersigned",
+    "label": "i.The Property was inspected by the undersigned on - ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "date_of_valuation",
+    "label": "Date of valuation",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "summary_of_valuation_section",
+    "label": "Summary Of Valuation ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "as_per_plan",
+    "label": "As Per Plan",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "uoyt_glr_value",
+    "label": "GLR Value",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "iuyt_market_value",
+    "label": "Market Value",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "uyt_realisable_value",
+    "label": "Realisable value",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "iutyre_distress_sale_value",
+    "label": "Distress Sale Value",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "date",
+    "label": "Date",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "column_break_yoph",
+    "label": null,
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "repo",
+    "label": "As Per Actual",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "glr_value",
+    "label": "GLR Value ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "fair_market",
+    "label": "Fair Market",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "realisable_value",
+    "label": "Realisable Value ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   },
+   {
+    "fieldname": "ip_distress_sale_value",
+    "label": "Distress Sale Value ",
+    "parent": "valuation_layout",
+    "parentfield": "fields",
+    "parenttype": "DocType Layout"
+   }
+  ],
+  "modified": "2026-02-23 13:05:05.277520",
+  "name": "valuation_layout",
+  "route": "valuation"
+ }
+]
