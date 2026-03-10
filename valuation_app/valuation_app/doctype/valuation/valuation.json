@@ -14,41 +14,48 @@
   "document_details_section",
   "layout_regularization",
   "name_of_approving_authority_2",
-  "name_of_approving_authority",
-  "column_break_rfcm",
-  "list_of_documents",
   "approval_no_2",
+  "building_plan",
+  "construction_plan",
+  "name_of_approving_authority",
   "approval_nosecond_third",
+  "legal_documents",
+  "list_of_documents",
   "list_of_doc_no",
   "physical_details_section",
   "as_per_deed",
+  "adjoining_properties",
   "east_side_property_1",
-  "pio",
   "west_side_property_1",
-  "ol_p",
   "north_side_property_1",
-  "hk_p",
   "south_side_property_1",
+  "column_break_eeky",
+  "pio",
+  "ol_p",
+  "hk_p",
   "er_l",
   "trio",
+  "adjoining_properties_2",
   "east_side_property_2",
-  "pravee_p",
   "west_side_property_2",
-  "retro_r",
   "north_side_property_2",
-  "repo_r",
   "south_side_property_2",
-  "prom_p",
-  "approved_land_use",
   "column_break_bxeg",
-  "no_of_rooms",
+  "pravee_p",
+  "retro_r",
+  "prom_p",
+  "repo_r",
+  "matching_boundaries_section",
+  "approved_land_use",
   "bed_rooms",
-  "toilets",
   "kitchen",
   "floor_on_which_the_property_is_located",
+  "residual_age_of_the_property",
+  "column_break_jygw",
+  "no_of_rooms",
+  "toilets",
   "total_no_of_floors",
   "approx_age_of_the_property",
-  "residual_age_of_the_property",
   "tenure_occupancy_details_section",
   "status_of_tenure",
   "owned_rented",
@@ -71,8 +78,6 @@
   "as_per_approved_plan_section",
   "number_of_floors_approved",
   "floor_details_approved",
-  "floor_area_calculation_section",
-  "floor_area_calculation",
   "valuation_section",
   "fort",
   "as_per_guideline_value",
@@ -83,24 +88,22 @@
   "dr_d",
   "realisable_value_for_market_land_rate",
   "forced_distressed_value_for_market_land_rate",
-  "amenities_section",
+  "floor_area_calculation_section",
+  "floor_area_calculation",
+  "total_b_section",
   "net_cost_after_depreciation",
-  "water_sump",
-  "septic_tank",
-  "bore",
-  "head_room",
+  "column_break_lcjg",
+  "net_cost_after_depreciation_1",
+  "amenities_section",
+  "amenities",
+  "calcualtions_section",
   "amentities",
   "total_buliding_value_amentities",
   "total_guide_line",
   "total_fair_market_value",
   "realizable_value",
   "forced_distressed_value",
-  "column_break_lztz",
-  "net_cost_after_depreciation_1",
-  "lo_l",
-  "ty_t",
-  "tl_t",
-  "mn_m",
+  "column_break_xaqq",
   "jkl_j",
   "jk_total_buliding_amentities",
   "iopl_total_guide_line",
@@ -111,18 +114,7 @@
   "property_undersigned",
   "date_of_valuation",
   "summary_of_valuation_section",
-  "as_per_plan",
-  "uoyt_glr_value",
-  "iuyt_market_value",
-  "uyt_realisable_value",
-  "iutyre_distress_sale_value",
-  "date",
-  "column_break_yoph",
-  "repo",
-  "glr_value",
-  "fair_market",
-  "realisable_value",
-  "ip_distress_sale_value"
+  "date"
  ],
  "fields": [
   {
@@ -167,18 +159,9 @@
    "placeholder": "Name of Approving Authority"
   },
   {
-   "fieldname": "column_break_rfcm",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "physical_details_section",
    "fieldtype": "Section Break",
    "label": "Physical Details"
-  },
-  {
-   "fieldname": "as_per_deed",
-   "fieldtype": "Heading",
-   "label": "As Per Deed"
   },
   {
    "fieldname": "no_of_rooms",
@@ -334,7 +317,7 @@
   {
    "fieldname": "as_per_guideline_value",
    "fieldtype": "Float",
-   "label": "As Per Guideline Value",
+   "label": "As Per Guideline Value (Land Area)",
    "precision": "2"
   },
   {
@@ -351,7 +334,7 @@
   {
    "fieldname": "as_per_market_rate",
    "fieldtype": "Int",
-   "label": "As Per Market Rate"
+   "label": "As Per Market Rate (Land Area)"
   },
   {
    "fieldname": "mr_rate_for_sft",
@@ -421,87 +404,99 @@
    "label": "Net Cost After Depreciation (Total As Per Approved Plan)"
   },
   {
-   "fieldname": "water_sump",
-   "fieldtype": "Float",
-   "label": "Water Sump (Total As Per Approved Plan)"
-  },
-  {
-   "fieldname": "septic_tank",
-   "fieldtype": "Float",
-   "label": "Septic Tank (Total As Per Approved Plan)"
-  },
-  {
-   "fieldname": "bore",
-   "fieldtype": "Float",
-   "label": "Bore (Total As Per Approved Plan)"
-  },
-  {
-   "fieldname": "head_room",
-   "fieldtype": "Float",
-   "label": "Head Room (Total As Per Approved Plan)"
+   "fieldname": "amenities",
+   "fieldtype": "Table",
+   "label": "Amenities",
+   "options": "Amenities"
   },
   {
    "fieldname": "amentities",
    "fieldtype": "Float",
-   "label": "Amentities (Total As Per Approved Plan)"
+   "label": "Amenities Total (As Per Approved Plan)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jkl_j",
+   "fieldtype": "Float",
+   "label": "Amenities Total (As Per Actual)",
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "total_buliding_value_amentities",
    "fieldtype": "Float",
-   "label": "Total Building Value  Amentities (Total As Per Approved Plan)"
+   "label": "Total Building Value + Amenities (Approved Plan)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "jk_total_buliding_amentities",
+   "fieldtype": "Float",
+   "label": "Total Building Value + Amenities (Actual)",
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "total_guide_line",
    "fieldtype": "Float",
-   "label": "Total(A+B+C)- Guide Line Value (Total As Per Approved Plan)"
+   "label": "Total (A+B+C) - Guide Line Value (As Per Approved Plan)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "iopl_total_guide_line",
+   "fieldtype": "Float",
+   "label": "Total (A+B+C) - Guide Line Value (As Per Actual)",
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "total_fair_market_value",
    "fieldtype": "Float",
-   "label": "Total(A+B+C) Fair Market Value (Total As Per Approved Plan)"
+   "label": "Total (A+B+C) Fair Market Value (As Per Approved Plan)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "khj_total_fair_market",
+   "fieldtype": "Float",
+   "label": "Total (A+B+C) Fair Market Value (As Per Actual)",
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "realizable_value",
    "fieldtype": "Float",
-   "label": "Realizable Value 90% (Total As Per Approved plan)"
+   "label": "Realizable Value 90% (As Per Approved Plan)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "piol_realizable_value",
+   "fieldtype": "Float",
+   "label": "Realizable Value 90% (As Per Actual)",
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "forced_distressed_value",
    "fieldtype": "Float",
-   "label": "Forced Distressed Value 80% (Total As Per Approved Plan)"
+   "label": "Forced Distressed Value 80% (As Per Approved Plan)",
+   "precision": "2",
+   "read_only": 1
   },
   {
-   "fieldname": "column_break_lztz",
-   "fieldtype": "Column Break"
+   "fieldname": "yuo_forced_distressed_value",
+   "fieldtype": "Float",
+   "label": "Forced Distressed Value 80% (As Per Actual)",
+   "precision": "2",
+   "read_only": 1
   },
   {
    "fieldname": "summary_of_valuation_section",
    "fieldtype": "Section Break",
    "label": "Summary Of Valuation "
-  },
-  {
-   "fieldname": "column_break_yoph",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "repo",
-   "fieldtype": "Heading",
-   "label": "As Per Actual"
-  },
-  {
-   "fieldname": "glr_value",
-   "fieldtype": "Data",
-   "label": "GLR Value "
-  },
-  {
-   "fieldname": "fair_market",
-   "fieldtype": "Data",
-   "label": "Fair Market"
-  },
-  {
-   "fieldname": "realisable_value",
-   "fieldtype": "Data",
-   "label": "Realisable Value "
   },
   {
    "fieldname": "approval_no_2",
@@ -511,127 +506,47 @@
   {
    "fieldname": "pio",
    "fieldtype": "Int",
-   "label": "East measurement (Ft)"
+   "label": "East side measurement (Ft)"
   },
   {
    "fieldname": "ol_p",
    "fieldtype": "Data",
-   "label": "west measurement (Ft)"
+   "label": "west side measurement (Ft)"
   },
   {
    "fieldname": "hk_p",
    "fieldtype": "Int",
-   "label": "North measurement (Ft)"
+   "label": "North side measurement (Ft)"
   },
   {
    "fieldname": "er_l",
    "fieldtype": "Data",
-   "label": "South measurement (Ft)"
+   "label": "South side measurement (Ft)"
   },
   {
    "fieldname": "pravee_p",
    "fieldtype": "Int",
-   "label": "East Measurement(Ft)"
+   "label": "East side Measurement(Ft)"
   },
   {
    "fieldname": "retro_r",
    "fieldtype": "Int",
-   "label": "West Measurement (Ft)"
+   "label": "West side Measurement (Ft)"
   },
   {
    "fieldname": "repo_r",
    "fieldtype": "Int",
-   "label": "North Measurement (Ft)"
+   "label": "North side Measurement (Ft)"
   },
   {
    "fieldname": "prom_p",
    "fieldtype": "Int",
-   "label": "South Measurement(Ft)"
-  },
-  {
-   "fieldname": "as_per_plan",
-   "fieldtype": "Heading",
-   "label": "As Per Plan"
+   "label": "South side Measurement(Ft)"
   },
   {
    "fieldname": "net_cost_after_depreciation_1",
    "fieldtype": "Float",
    "label": "Net Cost After Depreciation (Total As Per Actual)"
-  },
-  {
-   "fieldname": "lo_l",
-   "fieldtype": "Float",
-   "label": "Water Sump (Total As Per Actual)"
-  },
-  {
-   "fieldname": "ty_t",
-   "fieldtype": "Float",
-   "label": "Septic Tank (Total As Per Actual)"
-  },
-  {
-   "fieldname": "tl_t",
-   "fieldtype": "Float",
-   "label": "Bore (Total As Per Actual)"
-  },
-  {
-   "fieldname": "mn_m",
-   "fieldtype": "Float",
-   "label": "Head Room (Total As Per Actual)"
-  },
-  {
-   "fieldname": "jkl_j",
-   "fieldtype": "Float",
-   "label": "Amenities (Total As Per Actual)"
-  },
-  {
-   "fieldname": "jk_total_buliding_amentities",
-   "fieldtype": "Float",
-   "label": "Total Building Value Amentities (Total As Per Actual)"
-  },
-  {
-   "fieldname": "iopl_total_guide_line",
-   "fieldtype": "Float",
-   "label": "Total(A+B+C) - Guide Line Value (Total As Per Actual)"
-  },
-  {
-   "fieldname": "khj_total_fair_market",
-   "fieldtype": "Float",
-   "label": "Total(A+B+C) Fair Market Value (Total As Per Actual)"
-  },
-  {
-   "fieldname": "piol_realizable_value",
-   "fieldtype": "Float",
-   "label": "Realizable Value 90% (Total As Per Actual)"
-  },
-  {
-   "fieldname": "yuo_forced_distressed_value",
-   "fieldtype": "Float",
-   "label": "Forced Distressed Value 80% (Total As Per Actual)"
-  },
-  {
-   "fieldname": "uoyt_glr_value",
-   "fieldtype": "Data",
-   "label": "GLR Value"
-  },
-  {
-   "fieldname": "iuyt_market_value",
-   "fieldtype": "Data",
-   "label": "Market Value"
-  },
-  {
-   "fieldname": "uyt_realisable_value",
-   "fieldtype": "Data",
-   "label": "Realisable value"
-  },
-  {
-   "fieldname": "iutyre_distress_sale_value",
-   "fieldtype": "Data",
-   "label": "Distress Sale Value"
-  },
-  {
-   "fieldname": "ip_distress_sale_value",
-   "fieldtype": "Data",
-   "label": "Distress Sale Value "
   },
   {
    "fieldname": "name_of_approving_authority",
@@ -645,19 +560,19 @@
    "placeholder": "Eg, Sale Deed No:"
   },
   {
-    "fieldname": "approval_nosecond_third",
-    "fieldtype": "Data",
-    "label": "Approval No(second)(third)"
+   "fieldname": "approval_nosecond_third",
+   "fieldtype": "Data",
+   "label": "Approval No(second)(third)"
   },
   {
-    "fieldname": "list_of_doc_no",
-    "fieldtype": "Data",
-    "label": "Approval No(last one)"
+   "fieldname": "list_of_doc_no",
+   "fieldtype": "Data",
+   "label": "Approval No(last one)"
   },
   {
    "fieldname": "declaration_section",
    "fieldtype": "Section Break",
-   "label": "declaration"
+   "label": "Declaration"
   },
   {
    "fieldname": "property_undersigned",
@@ -723,12 +638,73 @@
    "fieldname": "south_side_property_2",
    "fieldtype": "Data",
    "label": "South side property"
+  },
+  {
+   "fieldname": "column_break_eeky",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "as_per_deed",
+   "fieldtype": "Heading",
+   "label": "As Per Deed"
+  },
+  {
+   "fieldname": "adjoining_properties",
+   "fieldtype": "Heading",
+   "label": "Adjoining Properties "
+  },
+  {
+   "fieldname": "matching_boundaries_section",
+   "fieldtype": "Section Break",
+   "label": "Matching Boundaries"
+  },
+  {
+   "fieldname": "column_break_jygw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adjoining_properties_2",
+   "fieldtype": "Heading",
+   "label": "Adjoining Properties"
+  },
+  {
+   "fieldname": "total_b_section",
+   "fieldtype": "Section Break",
+   "label": "Total (B)"
+  },
+  {
+   "fieldname": "column_break_lcjg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calcualtions_section",
+   "fieldtype": "Section Break",
+   "label": "calcualtions"
+  },
+  {
+   "fieldname": "column_break_xaqq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "building_plan",
+   "fieldtype": "Heading",
+   "label": "Building Plan"
+  },
+  {
+   "fieldname": "construction_plan",
+   "fieldtype": "Heading",
+   "label": "Construction Plan"
+  },
+  {
+   "fieldname": "legal_documents",
+   "fieldtype": "Heading",
+   "label": "Legal Documents"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-06 11:39:50.952362",
+ "modified": "2026-03-10 15:37:39.157778",
  "modified_by": "Administrator",
  "module": "Valuation App",
  "name": "Valuation",

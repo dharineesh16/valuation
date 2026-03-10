@@ -232,20 +232,7 @@ class Valuation(Document):
     # -------------------------------------------------
 
     def amenities_calculations(self):
-        self.amentities = (
-            flt(self.water_sump)
-            + flt(self.septic_tank)
-            + flt(self.bore)
-            + flt(self.head_room)
-        )
-
-        self.jkl_j = (
-            flt(self.lo_l)
-            + flt(self.ty_t)
-            + flt(self.tl_t)
-            + flt(self.mn_m)
-        )
-
+        # Get floor area totals from floor_area_calculation
         floor_area_total_approved = 0
         floor_area_total_actual = 0
         
@@ -256,18 +243,42 @@ class Valuation(Document):
                     floor_area_total_actual = flt(row.total_as_per_actual)
                     break
 
-        self.total_buliding_value_amentities = self.amentities + floor_area_total_approved
-        self.jk_total_buliding_amentities = self.jkl_j + floor_area_total_actual
-
-        self.total_guide_line = flt(self.tron) + self.total_buliding_value_amentities
-        self.iopl_total_guide_line = flt(self.tron) + self.jk_total_buliding_amentities
-
-        self.total_fair_market_value = flt(self.dr_d) + self.total_buliding_value_amentities
-        self.khj_total_fair_market = flt(self.dr_d) + self.jk_total_buliding_amentities
-
+        # Store net_cost values
+        self.net_cost_after_depreciation = floor_area_total_approved
+        self.net_cost_after_depreciation_1 = floor_area_total_actual
+        
+        # Get amenities total from amenities table
+        amenities_approved = 0
+        amenities_actual = 0
+        
+        if hasattr(self, 'amenities') and self.amenities:
+            for row in self.amenities:
+                amenity_type = str(row.amenity_type or '').strip()
+                if amenity_type in ['Water Sump', 'Septic Tank', 'Bore', 'Head Room']:
+                    amenities_approved += flt(row.as_per_approved_plan)
+                    amenities_actual += flt(row.as_per_actual)
+        
+        # Total Building Value + Amenities (As Per Approved Plan)
+        total_building_amenities_approved = floor_area_total_approved + amenities_approved
+        # Total Building Value + Amenities (As Per Actual)
+        total_building_amenities_actual = floor_area_total_actual + amenities_actual
+        
+        # Total Guide Line Value = tron + total building value
+        self.total_buliding_value_amentities = total_building_amenities_approved
+        self.jk_total_buliding_amentities = total_building_amenities_actual
+        
+        self.total_guide_line = flt(self.tron) + total_building_amenities_approved
+        self.iopl_total_guide_line = flt(self.tron) + total_building_amenities_actual
+        
+        # Total Fair Market Value = dr_d + total building value
+        self.total_fair_market_value = flt(self.dr_d) + total_building_amenities_approved
+        self.khj_total_fair_market = flt(self.dr_d) + total_building_amenities_actual
+        
+        # Realizable Value 90%
         self.realizable_value = self.total_fair_market_value * 0.9
         self.piol_realizable_value = self.khj_total_fair_market * 0.9
-
+        
+        # Forced Distressed Value 80%
         self.forced_distressed_value = self.total_fair_market_value * 0.8
         self.yuo_forced_distressed_value = self.khj_total_fair_market * 0.8
 
@@ -333,6 +344,22 @@ class Valuation(Document):
         Store final summary values into DocFields
         (Do NOT return dict - Frappe ignores it)
         """
+        # Get floor area totals from floor_area_calculation
+        floor_area_total_approved = 0
+        floor_area_total_actual = 0
+        
+        if hasattr(self, 'floor_area_calculation') and self.floor_area_calculation:
+            for row in self.floor_area_calculation:
+                if str(row.floor_type or '').strip().lower() == 'total':
+                    floor_area_total_approved = flt(row.total_as_per_approved_plan)
+                    floor_area_total_actual = flt(row.total_as_per_actual)
+                    break
+        
+        # Set net_cost values - these are the Building Value totals
+        self.net_cost_after_depreciation = flt(floor_area_total_approved)
+        self.net_cost_after_depreciation_1 = flt(floor_area_total_actual)
+        
+        # Summary values
         self.uoyt_glr_value = str(flt(self.total_guide_line))
         self.glr_value = str(flt(self.iopl_total_guide_line))
 
@@ -344,16 +371,3 @@ class Valuation(Document):
 
         self.iutyre_distress_sale_value = str(flt(self.forced_distressed_value))
         self.ip_distress_sale_value = str(flt(self.yuo_forced_distressed_value))
-        
-        floor_area_total_approved = 0
-        floor_area_total_actual = 0
-        
-        if hasattr(self, 'floor_area_calculation') and self.floor_area_calculation:
-            for row in self.floor_area_calculation:
-                if str(row.floor_type or '').strip().lower() == 'total':
-                    floor_area_total_approved = flt(row.total_as_per_approved_plan)
-                    floor_area_total_actual = flt(row.total_as_per_actual)
-                    break
-        
-        self.net_cost_after_depreciation = flt(floor_area_total_approved)
-        self.net_cost_after_depreciation_1 = flt(floor_area_total_actual)

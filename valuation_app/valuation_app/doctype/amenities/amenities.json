@@ -1,0 +1,51 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-03-10 04:30:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amenity_type",
+  "as_per_approved_plan",
+  "as_per_actual"
+ ],
+ "fields": [
+  {
+   "fieldname": "amenity_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Amenities Type",
+   "options": "Water Sump\nSeptic Tank\nBore\nHead Room"
+  },
+  {
+   "fieldname": "as_per_approved_plan",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "As Per Approved Plan",
+   "precision": "2"
+  },
+  {
+   "fieldname": "as_per_actual",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "As Per Actual",
+   "precision": "2"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-03-10 04:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Valuation App",
+ "name": "Amenities",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

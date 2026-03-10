@@ -586,29 +586,19 @@
             <td class="border-all" colspan="8" align="right" valign="bottom"><font face="Bookman Old Style" size="3">Net Cost After Depreciation</font></td>
             <td class="border-all" colspan="2" align="center" valign="middle"><b><font face="Bookman Old Style" size="3">{{doc.net_cost_after_depreciation}}</font></b></td>
             <td class="border-all" align="center" valign="middle"><b><font face="Bookman Old Style" size="3" color="#000000">{{doc.net_cost_after_depreciation_1}}</font></b></td>
-        </tr>
+         </tr>
+        {% set amenities_approved_total = namespace(value=0) %}
+        {% set amenities_actual_total = namespace(value=0) %}
+        {% for row in doc.amenities %}
+            {% if row.as_per_approved_plan %}{% set amenities_approved_total.value = amenities_approved_total.value + row.as_per_approved_plan %}{% endif %}
+            {% if row.as_per_actual %}{% set amenities_actual_total.value = amenities_actual_total.value + row.as_per_actual %}{% endif %}
         <tr>
-            <td class="border-all" colspan="2" rowspan="4" align="center" valign="middle"><b><font size="3" color="#000000">Amenities (C)</font></b></td>
-            <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Water Sump</font></td>
-            <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.water_sump}}</font></td>
-            <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.lo_l}}</font></td>
+            <td class="border-all" colspan="2" align="center" valign="middle"><b><font size="3" color="#000000"><br></font></b></td>
+            <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">{{ row.amenity_type }}</font></td>
+            <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{ row.as_per_approved_plan }}</font></td>
+            <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{ row.as_per_actual }}</font></td>
         </tr>
-        <tr>
-            <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Septic Tank</font></td>
-            <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.septic_tank}}</font></td>
-            <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.ty_t}}</font></td>
-        </tr>
-        <tr>
-            <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Bore</font></td>
-            <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.bore}}</font></td>
-            <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.tl_t}}</font></td>
-        </tr>
-        <tr>
-            <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Head Room</font></td>
-            <td class="border-all" colspan="2" align="center" valign="middle"><font face="Bookman Old Style" size="3">{{doc.head_room}}</font></td>
-            <td class="border-all" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">{{doc.mn_m}}</font></td>
-        </tr>
-        <tr>
+        {% endfor %}
             <td class="border-bottom border-left" align="center" valign="middle"><b><font size="3" color="#000000"><br></font></b></td>
             <td class="border-bottom border-right" align="center" valign="middle"><b><font size="3" color="#000000"><br></font></b></td>
             <td class="border-all" colspan="8" align="right" valign="middle"><font face="Bookman Old Style" size="3">Amenities ©</font></td>
@@ -757,30 +747,30 @@
         <tr>
             <td class="border-all" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
             <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">GLR Value</font></td>
-            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.uoyt_glr_value}}</font></td>
+            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.total_guide_line}}</font></td>
             <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">GLR Value</font></td>
-            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.glr_value}}</font></td>
+            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.iopl_total_guide_line}}</font></td>
         </tr>
         <tr>
             <td class="border-all" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
             <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Market Value</font></td>
-            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.iuyt_market_value}}</font></td>
+            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.total_fair_market_value}}</font></td>
             <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Fair Market Value</font></td>
-            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.fair_market}}</font></td>
+            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.khj_total_fair_market}}</font></td>
         </tr>
         <tr>
             <td class="border-all" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
             <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Realisable Value (90%)</font></td>
-            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.uyt_realisable_value}}</font></td>
+            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.realizable_value}}</font></td>
             <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Realisable Value (90%)</font></td>
-            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.realisable_value}}</font></td>
+            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.piol_realizable_value}}</font></td>
         </tr>
         <tr>
             <td class="border-all" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>
             <td class="border-all" colspan="4" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Distress Sale Value (80%)</font></td>
-            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.iutyre_distress_sale_value}}</font></td>
+            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.forced_distressed_value}}</font></td>
             <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">Distress Sale Value (80%)</font></td>
-            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.ip_distress_sale_value}}</font></td>
+            <td class="border-all" colspan="3" align="center" valign="middle"><font face="Bookman Old Style" size="3" color="#000000">₹{{doc.yuo_forced_distressed_value}}</font></td>
         </tr>
         <tr>
             <td class="border-left border-right" align="left" valign="bottom"><font face="Bookman Old Style" size="3" color="#000000"><br></font></td>

@@ -7,6 +7,8 @@ frappe.ui.form.on('Valuation', {
         const numFloors         = parseInt(frm.doc.number_of_floors) || 1;
         const numFloorsApproved = parseInt(frm.doc.number_of_floors_approved) || 1;
 
+        ensure_floor_tables_visible(frm);
+
         if (!frm.doc.floor_details || frm.doc.floor_details.length === 0) {
             generate_floor_rows(frm);
         } else if ((frm.doc.floor_details.length - 1) !== numFloors) {
@@ -31,6 +33,13 @@ frappe.ui.form.on('Valuation', {
                 update_floor_area_calculation_plinth_values(frm);
             }
             calculate_floor_area_calculation(frm);
+            
+            // Generate amenities table if not exists
+            if (!frm.doc.amenities || frm.doc.amenities.length === 0) {
+                generate_amenities_rows(frm);
+            }
+            calculate_amenities_table_values(frm);
+            
             recalculate_all(frm);
         }, 300);
     },
@@ -62,14 +71,16 @@ frappe.ui.form.on('Valuation', {
     rate_for_sft(frm)           { recalculate_all(frm); },
     as_per_market_rate(frm)     { recalculate_all(frm); },
     mr_rate_for_sft(frm)        { recalculate_all(frm); },
-    water_sump(frm)             { recalculate_all(frm); },
-    septic_tank(frm)            { recalculate_all(frm); },
-    bore(frm)                   { recalculate_all(frm); },
-    head_room(frm)              { recalculate_all(frm); },
-    lo_l(frm)                   { recalculate_all(frm); },
-    ty_t(frm)                   { recalculate_all(frm); },
-    tl_t(frm)                   { recalculate_all(frm); },
-    mn_m(frm)                   { recalculate_all(frm); },
+
+    amenities(frm) {
+        setTimeout(() => {
+            if (!frm.doc.amenities || frm.doc.amenities.length === 0) {
+                generate_amenities_rows(frm);
+            }
+            calculate_amenities_table_values(frm);
+            recalculate_all(frm);
+        }, 100);
+    },
 
     floor_details(frm) {
         setTimeout(() => recalculate_all(frm), 100);
@@ -122,6 +133,167 @@ frappe.ui.form.on('Floor Detail Approved', {
 });
 
 // =====================================================
+// CHILD TABLE - Amenities Details
+// =====================================================
+frappe.ui.form.on('Amenities', {
+    as_per_approved_plan(frm, cdt, cdn) {
+        calculate_amenities_table_values(frm);
+        recalculate_all(frm);
+    },
+    as_per_actual(frm, cdt, cdn) {
+        calculate_amenities_table_values(frm);
+        recalculate_all(frm);
+    },
+    amenities_add(frm) {
+        setTimeout(() => generate_amenities_rows(frm), 100);
+    },
+    amenities_remove(frm) {
+        calculate_amenities_table_values(frm);
+        recalculate_all(frm);
+    }
+});
+
+// =====================================================
+// GENERATE AMENITIES ROWS
+// =====================================================
+function generate_amenities_rows(frm) {
+    const amenityTypes = [
+        'Water Sump',
+        'Septic Tank',
+        'Bore',
+        'Head Room'
+    ];
+    
+    const existing = {};
+    (frm.doc.amenities || []).forEach(r => {
+        if (r.amenity_type) existing[r.amenity_type] = {
+            as_per_approved_plan: n(r.as_per_approved_plan),
+            as_per_actual: n(r.as_per_actual)
+        };
+    });
+    
+    frm.clear_table('amenities');
+    
+    amenityTypes.forEach(type => {
+        const row = frm.add_child('amenities');
+        row.amenity_type = type;
+        const sv = existing[type] || {};
+        row.as_per_approved_plan = sv.as_per_approved_plan || 0;
+        row.as_per_actual = sv.as_per_actual || 0;
+    });
+    
+    frm.refresh_field('amenities');
+}
+
+// =====================================================
+// CALCULATE AMENITIES TABLE VALUES
+// =====================================================
+function calculate_amenities_table_values(frm) {
+    if (!frm.doc.amenities || !frm.doc.amenities.length) return;
+    
+    // Get individual amenities values from the table
+    const waterSumpAP = n(get_amenity_value(frm, 'Water Sump', 'as_per_approved_plan'));
+    const septicTankAP = n(get_amenity_value(frm, 'Septic Tank', 'as_per_approved_plan'));
+    const boreAP = n(get_amenity_value(frm, 'Bore', 'as_per_approved_plan'));
+    const headRoomAP = n(get_amenity_value(frm, 'Head Room', 'as_per_approved_plan'));
+    
+    const waterSumpAA = n(get_amenity_value(frm, 'Water Sump', 'as_per_actual'));
+    const septicTankAA = n(get_amenity_value(frm, 'Septic Tank', 'as_per_actual'));
+    const boreAA = n(get_amenity_value(frm, 'Bore', 'as_per_actual'));
+    const headRoomAA = n(get_amenity_value(frm, 'Head Room', 'as_per_actual'));
+    
+    // Calculate Amenities (sum of individual)
+    const amenitiesAP = waterSumpAP + septicTankAP + boreAP + headRoomAP;
+    const amenitiesAA = waterSumpAA + septicTankAA + boreAA + headRoomAA;
+    
+    // Get net_cost_after_depreciation values from floor_area_calculation
+    let netCostAP = 0, netCostAA = 0;
+    const tr = (frm.doc.floor_area_calculation || []).find(r => r.floor_type === 'Total');
+    if (tr) {
+        netCostAP = n(tr.total_as_per_approved_plan);  // Total As Per Approved Plan
+        netCostAA = n(tr.total_as_per_actual);          // Total As Per Actual
+    }
+    
+    // Update net cost fields
+    frm.doc.net_cost_after_depreciation = netCostAP;
+    frm.doc.net_cost_after_depreciation_1 = netCostAA;
+    
+    // Total Building Value + Amenities = net_cost + amenities
+    const totalBuildingAP = netCostAP + amenitiesAP;
+    const totalBuildingAA = netCostAA + amenitiesAA;
+    
+    // Total Guide Line Value = tron + total building value
+    const tron = n(frm.doc.tron) || 0;
+    const totalGuideLineAP = tron + totalBuildingAP;
+    const totalGuideLineAA = tron + totalBuildingAA;
+    
+    // Total Fair Market Value = dr_d + total building value
+    const drd = n(frm.doc.dr_d) || 0;
+    const totalFairMarketAP = drd + totalBuildingAP;
+    const totalFairMarketAA = drd + totalBuildingAA;
+    
+    // Realizable Value 90% = fair market value * 0.9
+    const realizableAP = totalFairMarketAP * 0.9;
+    const realizableAA = totalFairMarketAA * 0.9;
+    
+    // Forced Distressed Value 80% = fair market value * 0.8
+    const forcedAP = totalFairMarketAP * 0.8;
+    const forcedAA = totalFairMarketAA * 0.8;
+    
+    // Set values in main form fields (read-only)
+    frm.doc.amentities = amenitiesAP;
+    frm.doc.jkl_j = amenitiesAA;
+    frm.doc.total_buliding_value_amentities = totalBuildingAP;
+    frm.doc.jk_total_buliding_amentities = totalBuildingAA;
+    frm.doc.total_guide_line = totalGuideLineAP;
+    frm.doc.iopl_total_guide_line = totalGuideLineAA;
+    frm.doc.total_fair_market_value = totalFairMarketAP;
+    frm.doc.khj_total_fair_market = totalFairMarketAA;
+    frm.doc.realizable_value = realizableAP;
+    frm.doc.piol_realizable_value = realizableAA;
+    frm.doc.forced_distressed_value = forcedAP;
+    frm.doc.yuo_forced_distressed_value = forcedAA;
+    
+    frm.refresh_field('amentities');
+    frm.refresh_field('jkl_j');
+    frm.refresh_field('total_buliding_value_amentities');
+    frm.refresh_field('jk_total_buliding_amentities');
+    frm.refresh_field('total_guide_line');
+    frm.refresh_field('iopl_total_guide_line');
+    frm.refresh_field('total_fair_market_value');
+    frm.refresh_field('khj_total_fair_market');
+    frm.refresh_field('realizable_value');
+    frm.refresh_field('piol_realizable_value');
+    frm.refresh_field('forced_distressed_value');
+    frm.refresh_field('yuo_forced_distressed_value');
+    frm.refresh_field('net_cost_after_depreciation');
+    frm.refresh_field('net_cost_after_depreciation_1');
+}
+
+// =====================================================
+// GET AMENITY VALUE
+// =====================================================
+function get_amenity_value(frm, type, field) {
+    if (!frm.doc.amenities) return 0;
+    const row = frm.doc.amenities.find(r => r.amenity_type === type);
+    return row ? n(row[field]) : 0;
+}
+
+// =====================================================
+// SET AMENITY VALUE
+// =====================================================
+function set_amenity_value(frm, type, field, value) {
+    if (!frm.doc.amenities) return;
+    const row = frm.doc.amenities.find(r => r.amenity_type === type);
+    if (row) {
+        row[field] = value;
+        if (row.name && locals[row.doctype] && locals[row.doctype][row.name]) {
+            locals[row.doctype][row.name][field] = value;
+        }
+    }
+}
+
+// =====================================================
 // CHILD TABLE - Floor Area Calculation
 // =====================================================
 frappe.ui.form.on('Floor Area Calculation', {
@@ -131,6 +303,15 @@ frappe.ui.form.on('Floor Area Calculation', {
 
 /* ===================================================== */
 const n = v => flt(v || 0);
+
+function ensure_floor_tables_visible(frm) {
+    ['floor_details', 'floor_details_approved', 'floor_area_calculation'].forEach(fieldname => {
+        if (!frm.fields_dict[fieldname]) return;
+        frm.set_df_property(fieldname, 'hidden', 0);
+        frm.set_df_property(fieldname, 'read_only', 0);
+        frm.refresh_field(fieldname);
+    });
+}
 
 // =====================================================
 // GENERATE FLOOR ROWS (As Per Actual)
@@ -352,10 +533,17 @@ function make_total_row_readonly(frm, fn) {
    MASTER PIPELINE
 ===================================================== */
 function recalculate_all(frm) {
+    // Step 1: Calculate guideline and market values (tron, dr_d)
     calculate_guideline_market(frm);
+    
+    // Step 2: Calculate amenities table values (this sets net_cost values too)
+    calculate_amenities_table_values(frm);
+    
+    // Step 3: Get values from amenities table and update summary fields
     calculate_amenities_and_totals(frm);
+    
+    // Step 4: Calculate deviations
     calculate_deviations(frm);
-    calculate_summary(frm);
 }
 
 // =====================================================
@@ -374,26 +562,39 @@ function calculate_guideline_market(frm) {
 // AMENITIES & TOTALS
 // =====================================================
 function calculate_amenities_and_totals(frm) {
-    const am  = n(frm.doc.water_sump) + n(frm.doc.septic_tank) + n(frm.doc.bore) + n(frm.doc.head_room);
-    const am2 = n(frm.doc.lo_l) + n(frm.doc.ty_t) + n(frm.doc.tl_t) + n(frm.doc.mn_m);
-    frm.doc.amentities = am; frm.doc.jkl_j = am2;
+    // Get values from amenities table (already calculated by calculate_amenities_table_values)
+    const totalGuideLineAP = get_amenity_value(frm, 'Total Guide Line Value', 'total_as_per_approved_plan');
+    const totalGuideLineAA = get_amenity_value(frm, 'Total Guide Line Value', 'total_as_per_actual');
+    
+    const totalFairMarketAP = get_amenity_value(frm, 'Total Fair Market Value', 'total_as_per_approved_plan');
+    const totalFairMarketAA = get_amenity_value(frm, 'Total Fair Market Value', 'total_as_per_actual');
+    
+    const realizableAP = get_amenity_value(frm, 'Realizable Value 90%', 'total_as_per_approved_plan');
+    const realizableAA = get_amenity_value(frm, 'Realizable Value 90%', 'total_as_per_actual');
+    
+    const forcedAP = get_amenity_value(frm, 'Forced Distressed Value 80%', 'total_as_per_approved_plan');
+    const forcedAA = get_amenity_value(frm, 'Forced Distressed Value 80%', 'total_as_per_actual');
+    
+    // Update summary values from table
+    frm.doc.uoyt_glr_value = String(n(totalGuideLineAP));
+    frm.doc.glr_value = String(n(totalGuideLineAA));
+    frm.doc.iuyt_market_value = String(n(totalFairMarketAP));
+    frm.doc.fair_market = String(n(totalFairMarketAA));
+    frm.doc.uyt_realisable_value = String(n(realizableAP));
+    frm.doc.realisable_value = String(n(realizableAA));
+    frm.doc.iutyre_distress_sale_value = String(n(forcedAP));
+    frm.doc.ip_distress_sale_value = String(n(forcedAA));
+    
+    // Get net_cost values from floor_area_calculation
     let fa = 0, fa2 = 0;
     const tr = (frm.doc.floor_area_calculation || []).find(r => r.floor_type === 'Total');
     if (tr) { fa = n(tr.total_as_per_approved_plan); fa2 = n(tr.total_as_per_actual); }
-    frm.doc.total_buliding_value_amentities = am  + fa;
-    frm.doc.jk_total_buliding_amentities    = am2 + fa2;
-    frm.doc.total_guide_line                = n(frm.doc.tron) + frm.doc.total_buliding_value_amentities;
-    frm.doc.iopl_total_guide_line           = n(frm.doc.tron) + frm.doc.jk_total_buliding_amentities;
-    frm.doc.total_fair_market_value         = n(frm.doc.dr_d) + frm.doc.total_buliding_value_amentities;
-    frm.doc.khj_total_fair_market           = n(frm.doc.dr_d) + frm.doc.jk_total_buliding_amentities;
-    frm.doc.realizable_value                = n(frm.doc.total_fair_market_value) * 0.9;
-    frm.doc.piol_realizable_value           = n(frm.doc.khj_total_fair_market)   * 0.9;
-    frm.doc.forced_distressed_value         = n(frm.doc.total_fair_market_value) * 0.8;
-    frm.doc.yuo_forced_distressed_value     = n(frm.doc.khj_total_fair_market)   * 0.8;
-    ['amentities','jkl_j','total_buliding_value_amentities','jk_total_buliding_amentities',
-     'total_guide_line','iopl_total_guide_line','total_fair_market_value','khj_total_fair_market',
-     'realizable_value','piol_realizable_value','forced_distressed_value',
-     'yuo_forced_distressed_value'].forEach(f => frm.refresh_field(f));
+    frm.doc.net_cost_after_depreciation = fa;
+    frm.doc.net_cost_after_depreciation_1 = fa2; 
+    
+    ['uoyt_glr_value','glr_value','iuyt_market_value','fair_market','uyt_realisable_value',
+     'realisable_value','iutyre_distress_sale_value','ip_distress_sale_value',
+     'net_cost_after_depreciation','net_cost_after_depreciation_1'].forEach(f => frm.refresh_field(f));
 }
 
 // =====================================================
@@ -430,25 +631,12 @@ function calculate_deviations(frm) {
 }
 
 // =====================================================
-// SUMMARY
+// SUMMARY - Now handled by calculate_amenities_and_totals
 // =====================================================
-function calculate_summary(frm) {
-    frm.doc.uoyt_glr_value             = String(n(frm.doc.total_guide_line));
-    frm.doc.glr_value                  = String(n(frm.doc.iopl_total_guide_line));
-    frm.doc.iuyt_market_value          = String(n(frm.doc.total_fair_market_value));
-    frm.doc.fair_market                = String(n(frm.doc.khj_total_fair_market));
-    frm.doc.uyt_realisable_value       = String(n(frm.doc.realizable_value));
-    frm.doc.realisable_value           = String(n(frm.doc.piol_realizable_value));
-    frm.doc.iutyre_distress_sale_value = String(n(frm.doc.forced_distressed_value));
-    frm.doc.ip_distress_sale_value     = String(n(frm.doc.yuo_forced_distressed_value));
-    let fa = 0, fa2 = 0;
-    const tr = (frm.doc.floor_area_calculation || []).find(r => r.floor_type === 'Total');
-    if (tr) { fa = n(tr.total_as_per_approved_plan); fa2 = n(tr.total_as_per_actual); }
-    frm.doc.net_cost_after_depreciation   = fa;
-    frm.doc.net_cost_after_depreciation_1 = fa2;
-    ['uoyt_glr_value','glr_value','iuyt_market_value','fair_market','uyt_realisable_value',
-     'realisable_value','iutyre_distress_sale_value','ip_distress_sale_value',
-     'net_cost_after_depreciation','net_cost_after_depreciation_1'].forEach(f => frm.refresh_field(f));
-}
+// calculate_summary function is no longer needed as all values
+// are now properly calculated in calculate_amenities_table_values
+// and retrieved in calculate_amenities_and_totals
 
 // End of file
+
+
